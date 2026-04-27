@@ -1,0 +1,54 @@
+{
+  "model": "BAAI/bge-base-en-v1.5",
+  "embedding_dim": 768,
+  "collection": "medical_reviews",
+  "text_embeddings": {
+    "count": 437,
+    "dim": 768,
+    "norm_mean": 1.0,
+    "norm_min": 1.0,
+    "norm_max": 1.0,
+    "norm_stddev": 0.0,
+    "all_normalized": true,
+    "by_cancer_type": {
+      "leukemia": 82,
+      "breast": 46,
+      "lung": 60,
+      "melanoma": 108,
+      "osteosarcoma": 49,
+      "skin": 92
+    },
+    "by_content_type": {
+      "prognosis_data": 99,
+      "clinical_recommendation": 82,
+      "clinical_text": 205,
+      "table_caption": 10,
+      "statistical_methods": 2,
+      "figure_caption": 39
+    }
+  },
+  "caption_embeddings": {
+    "count": 29,
+    "dim": 768,
+    "norm_mean": 1.0,
+    "norm_min": 1.0,
+    "norm_max": 1.0,
+    "norm_stddev": 0.0,
+    "all_normalized": true,
+    "by_cancer_type": {
+      "breast": 1,
+      "lung": 5,
+      "melanoma": 14,
+      "skin": 9
+    },
+    "by_content_type": {
+      "figure_caption": 22,
+      "table_caption": 7
+    }
+  },
+  "output_files": {
+    "text_embeddings": "D:\\Multimodal-GraphRAG-MedChat\\output\\embedding_export\\text_embeddings.jsonl",
+    "caption_embeddings": "D:\\Multimodal-GraphRAG-MedChat\\output\\embedding_export\\caption_embeddings.jsonl",
+    "image_metadata": "D:\\Multimodal-GraphRAG-MedChat\\output\\images\\image_metadata.json"
+  }
+}

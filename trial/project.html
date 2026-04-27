@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MedChat — Healthcare RAG POC</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* GLOBAL */
+body {
+  margin:0;
+  font-family:'Playfair Display', serif; /* ✅ readable */
+  background:#f5f7fb;
+  color:#1c1c2e;
+  line-height:1.6;
+}
+
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:40px;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg,#eef4ff,#e6efff);
+  padding:40px;
+  border-radius:16px;
+  margin-bottom:30px;
+}
+
+.hero h1 {
+  font-family:'Playfair Display', serif; /* ✅ premium headings */
+  font-size:40px;
+  margin:0;
+}
+
+.hero span {
+  color:#2ea36a;
+}
+
+.hero p {
+  margin-top:12px;
+  color:#444;
+  font-size:15px;
+}
+
+/* CARD */
+.card {
+  background:white;
+  border-radius:14px;
+  padding:24px;
+  margin-bottom:24px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.06);
+  transition:0.25s ease;
+}
+
+.card:hover {
+  transform:translateY(-3px);
+}
+
+.section-title {
+  font-family:'Playfair Display', serif;
+  font-size:20px;
+  font-weight:600;
+  margin-bottom:14px;
+  color:#1a3a6b;
+}
+
+/* TAGS */
+.tag {
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:20px;
+  background:#e8f7ef;
+  margin:5px;
+  font-size:12px;
+  font-weight:500;
+}
+
+/* PIPELINE */
+.pipeline li {
+  margin-bottom:8px;
+}
+
+/* GRID FIX (IMPORTANT) */
+.grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  align-items:start; /* ✅ FIXES EXTRA SPACE */
+}
+
+/* ARCHITECTURE */
+.arch-box {
+  border:2px dashed #cbd5e1;
+  border-radius:12px;
+  padding:20px;
+  margin-top:15px;
+  background:#fafbff;
+  text-align:center;
+}
+
+/* IMAGE FIX */
+.arch-box img {
+  width:100%;
+  max-width:900px;
+  height:auto;
+  border-radius:10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns:1fr;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
+  <h1>MedChat - <span>Healthcare RAG Assistant</span></h1>
+  <p>
+    AI-powered system to help cancer patients understand clinical reports, treatments,
+    and dietary guidance using medical literature and knowledge graphs.
+  </p>
+</div>
+
+<!-- OVERVIEW -->
+<div class="card">
+  <div class="section-title">1. Overview</div>
+  <p>
+    Cancer patients struggle to understand complex medical reports and fragmented healthcare information.
+    This system bridges that gap using AI-driven retrieval and explanation.
+  </p>
+</div>
+
+<!-- ARCHITECTURE -->
+<div class="card">
+  <div class="section-title">2. System Architecture</div>
+
+  <div class="arch-box">
+  <img 
+    src="https://lh3.googleusercontent.com/d/1GrrNvI-C7F2LbX_9JUSd6yy6oYRm77_z" 
+    alt="Architecture Diagram">
+  </div>
+</div>
+
+<!-- PIPELINE + FEATURES -->
+<div class="grid">
+
+<div class="card">
+  <div class="section-title">3. Pipeline</div>
+  <ul class="pipeline">
+    <li>Upload patient report (PDF/TXT)</li>
+    <li>Extract text (Docling / PyMuPDF)</li>
+    <li>Chunk + classify content</li>
+    <li>Generate embeddings</li>
+    <li>Store in Qdrant</li>
+    <li>Hybrid retrieval</li>
+    <li>RRF + MMR</li>
+    <li>LLM response generation</li>
+    <li>Render images</li>
+  </ul>
+</div>
+
+<div class="card">
+  <div class="section-title">4. Key Features</div>
+
+  <span class="tag">Multimodal RAG</span>
+  <span class="tag">Image Grounding</span>
+  <span class="tag">Hybrid Retrieval</span>
+  <span class="tag">Auto Analysis</span>
+
+  <ul>
+    <li>PDF ingestion with OCR</li>
+    <li>Image extraction + filtering</li>
+    <li>Caption-based retrieval</li>
+    <li>Patient-friendly explanations</li>
+  </ul>
+</div>
+
+</div>
+
+<!-- TECH STACK + USE CASE -->
+<div class="grid">
+
+<div class="card">
+  <div class="section-title">5. Tech Stack</div>
+  <ul>
+    <li>Frontend: Streamlit</li>
+    <li>Backend: Python</li>
+    <li>Embeddings: BGE</li>
+    <li>Vector DB: Qdrant</li>
+    <li>LLM: LLaMA 3.3 (Groq)</li>
+    <li>Retrieval: BM25 + RRF + MMR</li>
+  </ul>
+</div>
+
+<div class="card">
+  <div class="section-title">6. Use Case</div>
+  <p>
+    Patient uploads report → system explains diagnosis, treatment, diet,
+    and shows relevant medical images.
+  </p>
+</div>
+
+</div>
+
+<!-- GRAPHRAG -->
+<div class="card">
+  <div class="section-title">7. Future — GraphRAG</div>
+
+  <ul>
+    <li>Cancer ↔ Drug ↔ Food relationships</li>
+    <li>Drug–food interaction detection</li>
+    <li>Biomarker-based insights</li>
+    <li>Neo4j graph reasoning</li>
+  </ul>
+
+  <!-- IMAGE -->
+  <div class="arch-box">
+    <img 
+      src="https://lh3.googleusercontent.com/d/1KYAcfpVGp1sZiZlKjkv828immXdeRG4v"
+      alt="GraphRAG Architecture">
+  </div>
+</div>
+
+<!-- VALUE -->
+<div class="card">
+  <div class="section-title">8. Business Value</div>
+  <ul>
+    <li>Improves patient understanding</li>
+    <li>Reduces manual dependency</li>
+    <li>Trusted via citations</li>
+    <li>Scalable healthcare AI</li>
+  </ul>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+streamlit
+python-dotenv
+
+# RAG
+langchain==0.2.17
+langchain-community==0.2.19
+langchain-core==0.2.43
+langchain-text-splitters==0.2.2
+
+langchain-huggingface
+langchain-qdrant
+qdrant-client
+
+rank-bm25
+sentence-transformers
+groq
+
+# PDF processing
+pymupdf==1.24.10
+docling>=1.20.0
+easyocr
+
+# utils
+tqdm==4.66.5
+regex==2024.5.15
+unicodedata2==15.1.0
+
+# serach
+duckduckgo-search

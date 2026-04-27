@@ -1,0 +1,9 @@
+venv
+chroma_db
+qdrant_db
+__pycache__
+.env
+.cursor
+data
+markdown_papers
+pdfs

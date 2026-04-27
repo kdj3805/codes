@@ -1,0 +1,50 @@
+[
+  {
+    "id": "q001",
+    "query": "What chemotherapy drugs are used to treat osteosarcoma?",
+    "answer": "Osteosarcoma is treated with neoadjuvant chemotherapy followed by surgery and adjuvant chemotherapy. The main drugs used are methotrexate with leucovorin rescue, doxorubicin, cisplatin, and ifosfamide. Please consult your oncologist.",
+    "contexts": [
+      "Conventional treatment for OS consists of a combination of neoadjuvant and adjuvant chemotherapy, and surgery. The four chemotherapy agents that are in nearly all treatment regimens include methotrexate with leucovorin rescue, doxorubicin, cisplatin, and ifosfamide.",
+      "Prior to the 1970s, chemotherapy was not used for osteosarcoma and survival rates were dismal. The introduction of adjuvant chemotherapy increased survival rates to 50%."
+    ],
+    "ground_truth": "The standard chemotherapy for osteosarcoma includes methotrexate, doxorubicin, cisplatin, and ifosfamide, administered in neoadjuvant and adjuvant settings."
+  },
+  {
+    "id": "q002",
+    "query": "What is the 5-year survival rate for acute lymphoblastic leukemia in adults?",
+    "answer": "Despite a high rate of response to induction chemotherapy, only 30\u201340% of adult patients with ALL will achieve long-term remission. Elderly patients over 60 have particularly poor outcomes, with only 10\u201315% long-term survival. Please consult your oncologist for personalised information.",
+    "contexts": [
+      "Despite a high rate of response to induction chemotherapy, only 30\u201340% of adult patients with ALL will achieve long-term remission. Patients over the age of 60 have particularly poor outcomes, with only 10\u201315% long-term survival.",
+      "The MRC UKALL XII/ECOG 2993 regimen yielded a complete response rate of 91% and an overall 5-year survival of 38%."
+    ],
+    "ground_truth": "Adult ALL has a 5-year survival of approximately 38%. Long-term remission is achieved in 30\u201340% of adults, with elderly patients having significantly worse outcomes (10\u201315% survival)."
+  },
+  {
+    "id": "q003",
+    "query": "What are the major subtypes of melanoma?",
+    "answer": "Melanoma is classified into four main subtypes: superficial spreading melanoma (SSM, ~70%), nodular melanoma (~15%), lentigo maligna melanoma (~10%), and acral lentiginous melanoma (~2%). SSM is the most common and grows outward first.",
+    "contexts": [
+      "Clark divided melanoma into four main subtypes: superficial spreading melanoma (70% of all melanomas), nodular melanoma (approximately 15%), lentigo maligna melanoma (approximately 10%), and acral lentiginous melanoma (approximately 2%)."
+    ],
+    "ground_truth": "The four main melanoma subtypes are SSM (70%), nodular melanoma (15%), lentigo maligna melanoma (10%), and acral lentiginous melanoma (2%)."
+  },
+  {
+    "id": "q004",
+    "query": "How does topical tamoxifen compare to oral tamoxifen for breast cancer?",
+    "answer": "Topical 4-OHT gel showed comparable anti-proliferative effects to oral tamoxifen with significantly lower plasma concentrations, suggesting equivalent local efficacy with reduced systemic exposure and potentially fewer side effects.",
+    "contexts": [
+      "Lee et al. conducted a phase II randomized, double-blind, placebo-controlled trial comparing oral tamoxifen (20 mg/day) with topical 4-OHT gel (4 mg/day). The primary outcome, Ki-67 staining in DCIS lesions, showed post-therapy decreases of 3.4% in the 4-OHT group and 5.1% in the oral tamoxifen group (between-group p = 0.99). Mean 4-OHT concentrations in mammary adipose tissue were comparable, while plasma levels differed significantly."
+    ],
+    "ground_truth": "Topical 4-OHT gel achieves similar breast tissue concentrations and Ki-67 reduction compared to oral tamoxifen, but with much lower plasma levels, indicating reduced systemic toxicity."
+  },
+  {
+    "id": "q005",
+    "query": "What ALK inhibitors are approved for non-small cell lung cancer?",
+    "answer": "Five ALK tyrosine kinase inhibitors (TKIs) are approved for ALK-positive NSCLC: crizotinib (1st generation), ceritinib and alectinib and brigatinib (2nd generation), and lorlatinib (3rd generation). Each successive generation was developed to overcome resistance to the prior generation.",
+    "contexts": [
+      "The therapeutic development in this domain has led to the implementation of three generations of ALK tyrosine kinase inhibitors (TKI) with five molecules approved into clinical practice: crizotinib, ceritinib, alectinib, brigatinib, and lorlatinib.",
+      "Crizotinib was the first oral TKI molecule approved in 2011 by the FDA for metastatic NSCLC patients with ALK mutation. Ceritinib was the initial ALK TKI molecule of the second-generation class approved to overcome resistance to crizotinib. Lorlatinib is a third-generation TKI approved in 2018."
+    ],
+    "ground_truth": "Five ALK TKIs are FDA-approved for ALK-positive NSCLC: crizotinib (1st gen), ceritinib, alectinib, brigatinib (2nd gen), and lorlatinib (3rd gen)."
+  }
+]

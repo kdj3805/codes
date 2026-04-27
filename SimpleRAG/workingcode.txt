@@ -1,0 +1,501 @@
+import streamlit as st
+import tempfile
+import fitz  # PyMuPDF
+from pathlib import Path
+from typing import List, Dict, Any
+import io
+from PIL import Image
+
+from docling.document_converter import DocumentConverter, PdfFormatOption
+from docling.datamodel.base_models import InputFormat
+from docling.datamodel.pipeline_options import PdfPipelineOptions, EasyOcrOptions
+from docling_core.types.doc import ImageRefMode, TableItem, PictureItem, TextItem, DocItem
+
+from rapidocr_onnxruntime import RapidOCR
+
+
+# =========================
+# CONFIG
+# =========================
+
+ocr_engine = RapidOCR()
+
+
+# =========================
+# DOCLING CONVERTER
+# =========================
+
+def create_converter(aggressive_ocr: bool = False) -> DocumentConverter:
+    """
+    Configure Docling to extract text properly.
+    """
+    
+    ocr_options = EasyOcrOptions(
+        force_full_page_ocr=False,  # CRITICAL: Don't OCR text content
+        use_gpu=False
+    )
+    
+    pipeline_opts = PdfPipelineOptions(
+        do_table_structure=True,
+        generate_picture_images=True,
+        do_picture_description=False,
+        do_ocr=aggressive_ocr,  # Only for images
+        ocr_options=ocr_options,
+    )
+
+    return DocumentConverter(
+        format_options={
+            InputFormat.PDF: PdfFormatOption(
+                pipeline_options=pipeline_opts
+            )
+        }
+    )
+
+
+# =========================
+# IMAGE OCR
+# =========================
+
+def extract_all_image_text(pdf_path: str, page_no: int) -> List[Dict[str, Any]]:
+    """
+    Extract text from images using RapidOCR.
+    """
+    doc = fitz.open(pdf_path)
+    page = doc[page_no - 1]
+
+    image_texts = []
+    
+    for img_index, img in enumerate(page.get_images(full=True)):
+        xref = img[0]
+        
+        try:
+            pix = fitz.Pixmap(doc, xref)
+            
+            if pix.n < 5:  # RGB or grayscale
+                if pix.n == 1:
+                    img_pil = Image.frombytes("L", [pix.width, pix.height], pix.samples)
+                else:
+                    img_pil = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+                
+                img_path = tempfile.NamedTemporaryFile(delete=False, suffix=".png").name
+                img_pil.save(img_path)
+
+                result, _ = ocr_engine(img_path)
+                
+                if result:
+                    ocr_lines = [line[1] for line in result]
+                    ocr_text = "\n".join(ocr_lines)
+                    
+                    if ocr_text.strip():
+                        image_texts.append({
+                            'text': ocr_text,
+                            'index': img_index,
+                            'size': f"{pix.width}x{pix.height}",
+                            'lines': len(ocr_lines)
+                        })
+
+                Path(img_path).unlink(missing_ok=True)
+
+            pix = None
+            
+        except Exception as e:
+            continue
+
+    doc.close()
+    return image_texts
+
+
+# =========================
+# MAIN PROCESSOR
+# =========================
+
+def process_pdf(pdf_bytes: bytes, max_pages: int | None = None) -> Dict[str, Any]:
+    """
+    Process PDF extracting ALL content: text, tables, and images.
+    Always tries aggressive OCR first, falls back to normal if no images detected.
+    """
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as f:
+        f.write(pdf_bytes)
+        pdf_path = f.name
+
+    try:
+        # Try aggressive approach first
+        converter = create_converter(aggressive_ocr=True)
+        result = converter.convert(pdf_path)
+        doc = result.document
+
+        raw_text_parts = []
+        structured_parts = []
+        
+        current_page = 0
+        page_stats = {
+            'total_pages': 0,
+            'text_items': 0,
+            'tables': 0,
+            'images': 0,
+            'images_with_text': 0,
+        }
+        
+        # Track processed items to avoid duplicates
+        processed_images_per_page = {}
+        total_images_detected = 0
+
+        # CRITICAL: Process ALL items from Docling
+        for item, level in doc.iterate_items():
+            # Handle page tracking
+            if hasattr(item, "prov") and item.prov:
+                page_no = item.prov[0].page_no
+                
+                if page_no != current_page:
+                    current_page = page_no
+                    page_stats['total_pages'] = current_page
+                    processed_images_per_page[current_page] = False
+                    
+                    if max_pages and current_page > max_pages:
+                        break
+
+                    structured_parts.append(f"\n\n## Page {current_page}\n")
+                    raw_text_parts.append(f"\n\n=== PAGE {current_page} ===\n\n")
+                    
+                    # Process images ONCE per page with aggressive OCR
+                    if not processed_images_per_page[current_page]:
+                        image_texts = extract_all_image_text(pdf_path, current_page)
+                        if image_texts:
+                            total_images_detected += len(image_texts)
+                            for img_data in image_texts:
+                                page_stats['images_with_text'] += 1
+                                structured_parts.append(f"\n<imagedesc>\n{img_data['text']}\n</imagedesc>\n")
+                                raw_text_parts.append(f"\n[IMAGE TEXT]:\n{img_data['text']}\n")
+                        processed_images_per_page[current_page] = True
+
+            # Process different item types
+            if isinstance(item, TableItem):
+                page_stats['tables'] += 1
+                
+                try:
+                    table_md = item.export_to_markdown(doc=doc)
+                    structured_parts.append(f"\n<tableinfo>\n{table_md.strip()}\n</tableinfo>\n")
+                    raw_text_parts.append(f"\n{table_md.strip()}\n")
+                except Exception:
+                    try:
+                        table_md = item.export_to_markdown()
+                        structured_parts.append(f"\n<tableinfo>\n{table_md.strip()}\n</tableinfo>\n")
+                        raw_text_parts.append(f"\n{table_md.strip()}\n")
+                    except Exception:
+                        structured_parts.append("<tableinfo>Table detected but could not be parsed</tableinfo>")
+                    
+            elif isinstance(item, PictureItem):
+                # Just count images, don't duplicate OCR
+                page_stats['images'] += 1
+                
+                # Check if Docling already extracted text
+                try:
+                    if hasattr(item, 'text') and item.text and item.text.strip():
+                        ocr_text = item.text.strip()
+                        page_stats['images_with_text'] += 1
+                        structured_parts.append(f"\n<imagedesc>\n{ocr_text}\n</imagedesc>\n")
+                        raw_text_parts.append(f"\n[IMAGE TEXT]:\n{ocr_text}\n")
+                except Exception:
+                    pass
+                    
+            else:
+                # CRITICAL: This extracts ALL regular text content
+                # This includes: paragraphs, headings, lists, etc.
+                page_stats['text_items'] += 1
+                
+                try:
+                    # Try export_to_markdown first (best quality)
+                    if hasattr(item, 'export_to_markdown'):
+                        text = item.export_to_markdown()
+                    else:
+                        # Fallback to text attribute
+                        text = getattr(item, 'text', str(item))
+                    
+                    if text and text.strip():
+                        structured_parts.append(text)
+                        raw_text_parts.append(text)
+                        
+                except Exception as e:
+                    # Last resort: try to get any text
+                    try:
+                        if hasattr(item, 'text'):
+                            text = item.text
+                            if text and text.strip():
+                                structured_parts.append(text)
+                                raw_text_parts.append(text)
+                    except:
+                        pass
+
+        # Check if no images were detected with aggressive approach
+        # If so, fall back to normal approach
+        if total_images_detected == 0 and page_stats['images'] == 0:
+            # Re-process with normal OCR
+            converter = create_converter(aggressive_ocr=False)
+            result = converter.convert(pdf_path)
+            doc = result.document
+            
+            # Reset and re-process
+            raw_text_parts = []
+            structured_parts = []
+            current_page = 0
+            page_stats = {
+                'total_pages': 0,
+                'text_items': 0,
+                'tables': 0,
+                'images': 0,
+                'images_with_text': 0,
+            }
+            processed_images_per_page = {}
+            
+            for item, level in doc.iterate_items():
+                if hasattr(item, "prov") and item.prov:
+                    page_no = item.prov[0].page_no
+                    
+                    if page_no != current_page:
+                        current_page = page_no
+                        if max_pages and current_page > max_pages:
+                            break
+                        structured_parts.append(f"\n\n## Page {current_page}\n")
+                        raw_text_parts.append(f"\n\n=== PAGE {current_page} ===\n\n")
+                        processed_images_per_page[current_page] = False
+                        
+                        # Try normal OCR for images
+                        if not processed_images_per_page[current_page]:
+                            image_texts = extract_all_image_text(pdf_path, current_page)
+                            if image_texts:
+                                for img_data in image_texts:
+                                    page_stats['images_with_text'] += 1
+                                    structured_parts.append(f"\n<imagedesc>\n{img_data['text']}\n</imagedesc>\n")
+                                    raw_text_parts.append(f"\n[IMAGE TEXT]:\n{img_data['text']}\n")
+                            processed_images_per_page[current_page] = True
+                
+                if isinstance(item, TableItem):
+                    try:
+                        table_md = item.export_to_markdown(doc=doc)
+                        structured_parts.append(f"\n<tableinfo>\n{table_md.strip()}\n</tableinfo>\n")
+                        raw_text_parts.append(f"\n{table_md.strip()}\n")
+                    except Exception:
+                        try:
+                            table_md = item.export_to_markdown()
+                            structured_parts.append(f"\n<tableinfo>\n{table_md.strip()}\n</tableinfo>\n")
+                            raw_text_parts.append(f"\n{table_md.strip()}\n")
+                        except Exception:
+                            structured_parts.append("<tableinfo>Table detected but could not be parsed</tableinfo>")
+                            
+                elif isinstance(item, PictureItem):
+                    page_stats['images'] += 1
+                    try:
+                        if hasattr(item, 'text') and item.text and item.text.strip():
+                            ocr_text = item.text.strip()
+                            page_stats['images_with_text'] += 1
+                            structured_parts.append(f"\n<imagedesc>\n{ocr_text}\n</imagedesc>\n")
+                            raw_text_parts.append(f"\n[IMAGE TEXT]:\n{ocr_text}\n")
+                    except Exception:
+                        pass
+                else:
+                    page_stats['text_items'] += 1
+                    try:
+                        if hasattr(item, 'export_to_markdown'):
+                            text = item.export_to_markdown()
+                        else:
+                            text = getattr(item, 'text', str(item))
+                        if text and text.strip():
+                            structured_parts.append(text)
+                            raw_text_parts.append(text)
+                    except Exception:
+                        try:
+                            if hasattr(item, 'text'):
+                                text = item.text
+                                if text and text.strip():
+                                    structured_parts.append(text)
+                                    raw_text_parts.append(text)
+                        except:
+                            pass
+
+        return {
+            'raw_text': '\n\n'.join(raw_text_parts),
+            'structured_output': '\n\n'.join(structured_parts),
+            'diagnostics': page_stats
+        }
+
+    finally:
+        Path(pdf_path).unlink(missing_ok=True)
+
+
+# =========================
+# STREAMLIT UI
+# =========================
+
+def main():
+    st.set_page_config("Multimodal RAG Ingestion", layout="wide")
+    st.title("Multimodal RAG PDF Ingestion")
+    
+
+    with st.sidebar:
+        st.header("Settings")
+        
+        max_pages = st.number_input(
+            "Limit pages (0 = all)", 
+            min_value=0, 
+            max_value=100, 
+            value=0
+        )
+        
+        st.divider()
+        
+        st.markdown("""
+        **Extraction Strategy:**
+        
+        1. **Text Content**: Directly extracted from PDF
+        2. **Tables**: Parsed with TableFormer
+        3. **Images**: OCR'd with RapidOCR (aggressive mode, falls back to normal if needed)
+        """)
+
+    uploaded = st.file_uploader("Upload PDF", type=["pdf"])
+
+    if uploaded:
+        st.success(f"Uploaded: {uploaded.name}")
+        
+        if st.button("Process Document", type="primary"):
+            with st.spinner(f"Extracting content..."):
+                result = process_pdf(
+                    uploaded.getvalue(),
+                    None if max_pages == 0 else max_pages
+                )
+
+            diag = result['diagnostics']
+            st.success(f"✓ Processed {diag['total_pages']} pages")
+            
+            # Show diagnostics
+            col1, col2, col3, col4 = st.columns(4)
+            with col1:
+                st.metric("Text Items", diag['text_items'])
+            with col2:
+                st.metric("Tables", diag['tables'])
+            with col3:
+                st.metric("Images", diag['images'])
+            with col4:
+                st.metric("Images with Text", diag['images_with_text'])
+            
+            # Quality indicator
+            if diag['text_items'] > 10:
+                st.success("✓ Rich text content extracted")
+            else:
+                st.warning("⚠ Low text content - check if PDF is scanned")
+            
+            # Tabs for different outputs
+            tab1, tab2, tab3 = st.tabs([
+                "RAW TEXT (for RAG)",
+                "Structured Output", 
+                "Diagnostics"
+            ])
+            
+            with tab1:
+                st.subheader("Clean Text for RAG Pipeline")
+                st.markdown("""
+                **Use this for:**
+                - Chunking (RecursiveCharacterTextSplitter, SemanticChunker, etc.)
+                - Embedding generation
+                - Vector database ingestion
+                """)
+                
+                st.text_area(
+                    "Full Content",
+                    result['raw_text'],
+                    height=600
+                )
+                
+                st.info(f"Total length: {len(result['raw_text'])} characters")
+            
+            with tab2:
+                st.subheader("Structured Output with XML Tags")
+                st.markdown("""
+                Includes semantic tags:
+                - `<tableinfo>` - Tables
+                - `<imagedesc>` - Image descriptions/OCR
+                """)
+                
+                st.code(result['structured_output'], language="markdown")
+                
+                st.info(f"Total length: {len(result['structured_output'])} characters")
+            
+            with tab3:
+                st.subheader("Processing Statistics")
+                
+                st.json(diag)
+                
+                st.divider()
+                
+                st.markdown("""
+                **Quality Assessment:**
+                
+                 **Good PDF** (for RAG):
+                - Text Items > 20
+                - Tables extracted properly
+                - Images processed separately
+                
+                 **Scanned PDF**:
+                - Text Items < 10
+                - Images > Text Items
+                - Most content in image OCR
+                
+                **Next Steps:**
+                1. Copy RAW text from the first tab
+                2. Apply chunking strategy
+                3. Generate embeddings
+                4. Load into vector DB
+                """)
+    
+    else:
+        st.info("Upload a PDF to begin processing")
+        
+        with st.expander("How This Works"):
+            st.markdown("""
+            **Extraction Pipeline:**
+```
+            PDF Input
+              ↓
+            Docling Processing
+              ↓
+            ├─ Text Content (PyPdfium2) → Direct extraction
+            ├─ Tables (TableFormer) → Structured parsing
+            └─ Images (RapidOCR) → OCR extraction
+              ↓
+            Combined Output (RAG-ready)
+```
+            
+            **Why This Works:**
+            
+            1. **No double OCR**: Text is extracted directly, not OCR'd
+            2. **Table preservation**: Tables maintain structure
+            3. **Image handling**: Actual images are OCR'd separately
+            4. **Clean output**: No noise, no duplicates
+            
+            **For RAG Pipelines:**
+            - Use the RAW TEXT output
+            - Contains all content in proper order
+            - Ready for chunking strategies
+            - No post-processing needed
+            """)
+        
+        with st.expander("Quick Start"):
+            st.markdown("""
+            **Setup:**
+```bash
+            pip install docling streamlit pymupdf pillow rapidocr-onnxruntime
+```
+            
+            **Run:**
+```bash
+            streamlit run app.py
+```
+            
+            **For Best Results:**
+            1. Upload your PDF
+            2. Click "Process Document"
+            3. View results in Streamlit (aggressive OCR is used automatically)
+            """)
+
+
+if __name__ == "__main__":
+    main()

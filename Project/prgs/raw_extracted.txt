@@ -1,0 +1,305 @@
+[IMAGE - Page 1, Image 1]
+
+OCR Text:
+IBM MaaS360
+
+[IMAGE - Page 2, Image 1]
+
+OCR Text:
+IBM MaaS360
+
+[IMAGE - Page 3, Image 1]
+
+OCR Text:
+IBM MaaS360
+
+[IMAGE - Page 4, Image 1]
+
+OCR Text:
+IBM MaaS360
+
+[IMAGE - Page 5, Image 1]
+
+OCR Text:
+IBM MaaS360
+
+[IMAGE - Page 6, Image 2]
+
+OCR Text:
+IBM MaaS360
+
+[IMAGE - Page 6, Image 1]
+
+OCR Text:
+Configure Passcode Policy
+Passcode
+Enforce Passcode on Mobile Device
+Allow Simple Passcode Passcode values that are ascending, descending or repeating character sequences (e.g. 1111, 123_ 654, abc Xyz) .
+Require Alphanumeric in Passcode (at least one letter)
+Minimum Passcode Length
+Required Number of Special Characters (1-4)
+Maximum Passcode Age (1-730 days_ or blank)
+Allowed Idle Time (in minutes) Before Auto-Lock
+Number of Unique Passcodes Required Before Reuse Allowed (1-50, or blank)
+Grace Period for Device Lock
+Minutes
+Number of Failed Passcode Attempts Before All Data Is Erased (4-16)
+
+[IMAGE - Page 7, Image 2]
+
+OCR Text:
+IBM MaaS360
+
+[IMAGE - Page 7, Image 1]
+
+OCR Text:
+Device Security
+Enforce Device Encryption No Note: Device Encryption policy will only be enforced on devices that support hardware encryption_ On SAFE devices; if device encryption Is enforced, passcode policy configured will be automatically made stricter and the user will be requlred to set & 6 digit alphanumeric passcode.
+Enforce SD Card Encryption Select If the SD Card encryption should be enabled
+No
+
+[IMAGE - Page 7, Image 3]
+
+OCR Text:
+Encryption Support Ensure managed devices support designated levels of encryptlon: Trigger Actlon on Hardware Encryption Status
+Block-level
+Not Supported
+File-level
+No Encryption
+Enforcement Action Confiqure the actlons to be taken at the rcquired tIme Intervals; Tima Intennl specitled a any lcvel I5 taken w5 the Wall Ume post the prvlous acton:
+Immedlately after OOC Hours later
+Alert
+Alent Alert Block Selective Wipe Change Policy Wipe Remove Contro Hide Device
+Notify User:
+Emall
+Notfy Admins:
+Standard Emall List
+Messagc enter custom message for this rulc: Maximum 0l 1024 characters are allowed an ~S"I[} > carnot be used. Customize for each action
+anio ccmmrad
+Roun Crd u Gela
+
+[IMAGE - Page 8, Image 2]
+
+OCR Text:
+IBM MaaS360
+
+[IMAGE - Page 8, Image 1]
+
+OCR Text:
+iCloud
+Allow Cloud Backup
+Yes
+iOS 5.0+
+Allow Cloud Keychain Sync
+Yes
+IOS 7.0+
+Allow Documents Sync
+Yes
+IOS 5.0+
+Allow Photo Stream Sync (disallowing can cause data loss)
+Yes
+iOS 5.0+
+Allow Shared Photo Stream
+Yes
+IOS 6.0+
+Allow iCloud Photo Library Yes Allow iCloud Photo Library: IF dlsabled any photos not completely downloaded wlll be removed from local storage
+iOS 9.0+
+
+[IMAGE - Page 9, Image 2]
+
+OCR Text:
+IBM MaaS360
+
+[IMAGE - Page 9, Image 1]
+
+OCR Text:
+Configure Restricted Applications (App Blacklist) Add Name for Apps restricted on managed devices.
+Application Name
+Dropbox
+Change Region
+Configure Allowed Applications (APP Whitelist) Add Name for Apps allowed on managed devices. Any other app would be disallowed
+Configure Required Applications Add Name and Bundle ID for the apps required to be installed on managed devices. This policy can be used in conjunction with the Blacklist or Whitelist policy settings. It is recommended that you also use the App Management workflows to distribute this app to the appropriate devices_
+Application Name
+Box for EMM
+Change Region
+Application Name
+MaaS360 for IOS
+Change Region
+
+[IMAGE - Page 10, Image 2]
+
+OCR Text:
+IBM MaaS360
+
+[IMAGE - Page 11, Image 2]
+
+OCR Text:
+IBM MaaS360
+
+[IMAGE - Page 11, Image 1]
+
+OCR Text:
+Configure Secure Mall
+Hiil scryor Olfice 365 Select the appropriate Lcilsere ensute that tne devices get apcroved outomal ca Approva| supparted for Exchange, Offlce 365,IB4 Traveler and 184 Connetions Gioud
+Hostname the ActlveSync Scrver nter vour Eman Server URL;
+Use SSL Conncure Secute Connecuon
+Dom
+Lacti
+Leavc thls blank Usc trc Uscr' $ domain nome uscMamc belng enteted Teld bclov 4n0 Yon domain namo then antur tn4; domain nan 4odomainon domoin
+Accounc Usernamc Lcavethls bhnk to Usatne usemami th 5 system; Account Usemame EAme Emal Adaress Ksucn Omce365 1BM Traveler) Use Rbemali80 . the variable-
+Emall Addross
+Leave [nis Dlank
+IE ucerq ema| adoress
+Authentication Type Choase frcm Comporate Credentials Centifcatc Desed autrentication;
+Pass '0ro
+App Badgc Count 5elec Bacge Count shom Ior ne# Lsers Users WIII be able Chonge Sctonos
+Authentct uslng WorkPlace Account Ublizes common WorkPizce credenuals (Dr emii #Vltenocabon. Users wiI no: be Dromoted Anter edentiais Work? ece Gedentals have already Been entered;
+Default Slgnature Users Mll sbil be able J00 (neir Persona| 5 pnature whead Ithe defule sianeture
+Organize Thread #ung wimi applicd only during Injujl Moll conniqutjtion, Usr} Cun change {his Vcrer Scttings (he App_
+
+[IMAGE - Page 11, Image 3]
+
+OCR Text:
+Configure Devlce Security Policies
+Rcstrict Jallbrokon / Rooted Davlcn Pteelm UBr  toIn certng ICcune conlent Inlret Devo Isdallbrozen
+Tdited
+Restrict Devicer With nan
+Prevene Bccess
+corporate dnlenl
+melxafe detected Lhe device.
+Enable Tlmebomb (days) Delete corporete date from contaler Nol ecclIsL) for defced number Of day> (7 Leave &0nt Iondr
+Configure Data Protection Policies
+Restrict Fllc Export Rasurict expant 0" manjgcd content and ema aencmenls Ensure that content Ronxafoe Lng extemal/personal emall clients opcnco unmanuocd #pPs . In WIndome proni Cavlort Mthls Fnirei documert and enta | artachMonts #IlI dowin ondcc
+RestrIct Clipboard Export Reancrs copyino conmnbino Dastino Aatatai waulasll LsL CooiDasl mun tNe JOp Duslde Intc Thcado
+unmanoed OPC Your MEAT cody conlenliron
+RcstrIc Scrrenthot Restricts user Irorn tlung screenshols ard dlsables vlewing ooatyke Jac Gelet Manecer.
+Non-att
+Rtstrlch Print
+Rcatrict Impon Files Lser KIl Fot B eble [mnpor documerk Iom other Apps Iocoll
+enell &r gave tnent
+Allov Wldocta Fac McEF add Ma |, Calendar tnd Doc wldoets
+
+[IMAGE - Page 11, Image 4]
+
+OCR Text:
+Secure Mail Security Settings
+Restrict Attachment Forwarding Restrict emails with attachments from being forwarded
+No
+Restrict Email to External Domains Prevent email from being sent to non-corporate email domains:
+No
+
+[IMAGE - Page 12, Image 2]
+
+OCR Text:
+IBM MaaS360
+
+[IMAGE - Page 12, Image 1]
+
+OCR Text:
+Wi-Fi WPA/WPAZ (Enterprise) Profiles
+WPA/WPA2 (Enterprise)
+Configure for type
+Service Set Identifier (SSID) Identification of the wlreless network t0 be connected
+Auto Join
+Hidden Network
+Encryption Type "WPA" corresponds t0 WPA and WPAZ and applies to both encryption types. Make sure that these values exactly match the capabilities of the network access point If you're unsure about the encryption type or would prefer that it applles to all encryption types, Use the value "Any'
+Select -
+Always Prompt User for Password Supported for Encryption Types Any; WEP Or WPA
+
+[IMAGE - Page 13, Image 2]
+
+OCR Text:
+IBM MaaS360
+
+[IMAGE - Page 13, Image 1]
+
+OCR Text:
+Jailbroken (IOS) and Rooted (Android) Devices Ensure managed devices are not Jallbroken 0r rooted: IOS Appllcation required for Jallbreak detecton:
+Enforcement Action Configure the actions to be taken at the required time Intervals. Time Interval specifled at any level Is taken the Walt Ume post the previous ecuon;
+#1 Immediately after OOC Hours later
+Alert
+Block
+Notify User: Notify Admins:
+Email
+Device Notification
+Standard Emall List
+Other Emalls
+Message Entcr Custom messagc far thls rulc. Maximum 0f 1024 characters are allowed and ~S"I[{} > cannot bC used Samc messagc far all actions
+FInst notice: Yovr device Ja Ibroken- Thts Jgainst corporalc policy.  In hout You MIbc blocked from corporate [escurces not remcdietcd,
+Second notkce: Yoy have falled remediate Your Jailbroken Cevice Cororarc DCCCS has becn restrictcd
+
+[IMAGE - Page 14, Image 2]
+
+OCR Text:
+IBM MaaS360
+
+[IMAGE - Page 14, Image 1]
+
+OCR Text:
+My Alert Center
+Last Analyzed: 05/04/2016 13.48 EDT
+6
+4 Remove Potential Malware Devices
+9 Enrollment Remediation Devices Required
+23 Remediate Device Devices Passcode
+Review Rooted Devices Devices
+Review Jailbroken Devices Devices
+10 Vredkgocal Delivery (PHL) Devices
+
+[IMAGE - Page 14, Image 3]
+
+OCR Text:
+Search Results Show Criteria
+Device Nume obotcy Vcnuc 8 7840 Vg Loc;c "esjede Yoreste
+Userjmc
+Hodcl
+Operating
+Last Rcpor_=
+Configure_
+OS Version
+Platlorm
+Conligurt
+Managed
+Db**Cy
+Venc 8 7840
+Androld 4 444 (KTU
+05/04/2016 12::
+Doc Stcro k cblc
+Andro 0
+No
+Enrollad
+Cabrcche iPad Wn Latc Ucrado Yonc;
+cisbieht
+[Pod (tM1 Gen, CDM
+DS
+05/04/2016 09:53
+WIF Rayload Conij
+9.1,1 (136238)
+IOS
+Enrollad
+(Ped Vor Lccaie "c9c Jorc;
+markotinadcmos
+Pad mini
+TO5 9
+05/04/7016 02.54
+Emall Sciting: Rcs:
+9.7.1 ('3015)
+iOS
+No
+Enrollsd
+rmorns MC Occ * Vem Lceac Yexde Ponl 
+mona
+HIC Onc X
+Ancrold +1.1 (JRO
+05/01/2016 12.26
+Mi-n contqute:on
+0
+Ancro d
+No
+Enrolled
+Jump To Page
+Display ng 1 < $ of # Records Show 25
+Records
+Customize Column:
+CSV
+Expor
