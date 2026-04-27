@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="DFD">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- User -->
+        <mxCell id="user" value="User" style="shape=ellipse;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="100" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- UI -->
+        <mxCell id="ui" value="Streamlit UI&#xa;(cancer_app.py)" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="300" width="160" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Controller -->
+        <mxCell id="controller" value="Controller&#xa;generate_answer_stream()" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="300" width="200" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Router -->
+        <mxCell id="router" value="Mode Router&#xa;(AUTO / GRAPH / RESEARCH)" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="300" width="200" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Graph Retrieval -->
+        <mxCell id="graph" value="Graph Retrieval&#xa;(Neo4j + Cypher)" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="950" y="150" width="200" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Dense -->
+        <mxCell id="dense" value="Dense Retrieval&#xa;(Neo4jVector)" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="950" y="260" width="200" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Sparse -->
+        <mxCell id="sparse" value="Sparse Retrieval&#xa;(BM25)" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="950" y="370" width="200" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Fusion -->
+        <mxCell id="fusion" value="RRF Fusion" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="300" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- MMR -->
+        <mxCell id="mmr" value="MMR Rerank" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1400" y="300" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Context -->
+        <mxCell id="context" value="Context Builder" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1600" y="300" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- LLM -->
+        <mxCell id="llm" value="Groq LLM" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1800" y="300" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Output -->
+        <mxCell id="output" value="Response Stream" style="shape=ellipse;" vertex="1" parent="1">
+          <mxGeometry x="2000" y="300" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e1" edge="1" source="user" target="ui" parent="1"/>
+        <mxCell id="e2" edge="1" source="ui" target="controller" parent="1"/>
+        <mxCell id="e3" edge="1" source="controller" target="router" parent="1"/>
+        <mxCell id="e4" edge="1" source="router" target="graph" parent="1"/>
+        <mxCell id="e5" edge="1" source="router" target="dense" parent="1"/>
+        <mxCell id="e6" edge="1" source="router" target="sparse" parent="1"/>
+        <mxCell id="e7" edge="1" source="dense" target="fusion" parent="1"/>
+        <mxCell id="e8" edge="1" source="sparse" target="fusion" parent="1"/>
+        <mxCell id="e9" edge="1" source="fusion" target="mmr" parent="1"/>
+        <mxCell id="e10" edge="1" source="mmr" target="context" parent="1"/>
+        <mxCell id="e11" edge="1" source="graph" target="context" parent="1"/>
+        <mxCell id="e12" edge="1" source="context" target="llm" parent="1"/>
+        <mxCell id="e13" edge="1" source="llm" target="output" parent="1"/>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

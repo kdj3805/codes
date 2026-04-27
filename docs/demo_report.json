@@ -1,0 +1,184 @@
+{
+  "query": "What chemotherapy drugs are used to treat osteosarcoma?",
+  "final_answer_preview": "Osteosarcoma is treated with a combination of neoadjuvant chemotherapy, surgery, and adjuvant chemotherapy. The main drugs used are methotrexate with leucovorin rescue, doxorubicin, cisplatin, and ifo...",
+  "overall_score": 0.2555,
+  "overall_grade": "F",
+  "evaluation_time_ms": 36.22,
+  "timestamp": 1775504215.1217203,
+  "warnings": [
+    "ground_truth_captions not provided; selection_recall set to 0",
+    "doc ID lists not provided; P@k and R@k set to 0"
+  ],
+  "components": {
+    "retrieval": {
+      "component": "retrieval",
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": 0.0,
+        "redundancy": 0.9485,
+        "ndcg_at_k": 1.0,
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0,
+        "query_coverage": 0.0
+      },
+      "overall": 0.2784,
+      "grade": "F",
+      "metadata": {
+        "num_retrieved": 3,
+        "k": 3,
+        "raw_redundancy": 0.0515
+      },
+      "latency_ms": 0.93,
+      "warnings": [
+        "doc ID lists not provided; P@k and R@k set to 0"
+      ]
+    },
+    "generation": {
+      "component": "generation",
+      "scores": {
+        "faithfulness": 0.0,
+        "answer_relevance": 0.0,
+        "hallucination_clean": 1.0,
+        "bleu": 0.0793,
+        "token_f1": 0.4103
+      },
+      "overall": 0.2979,
+      "grade": "F",
+      "metadata": {
+        "used_llm_judge": false,
+        "heuristic_faithfulness": 0.0,
+        "heuristic_relevance": 0.0,
+        "unsupported_claims": [],
+        "answer_word_count": 41,
+        "is_web_fallback": false
+      },
+      "latency_ms": 2.01,
+      "warnings": []
+    },
+    "graph": {
+      "component": "graph",
+      "scores": {
+        "entity_alignment": 0.0,
+        "context_density": 0.6364,
+        "traversal_coverage": 0.0,
+        "multihop_validity": 1.0,
+        "graph_query_overlap": 0.0
+      },
+      "overall": 0.3273,
+      "grade": "F",
+      "metadata": {
+        "num_graph_results": 1,
+        "num_entities_found": 1,
+        "num_entities_queried": 5
+      },
+      "latency_ms": 0.19,
+      "warnings": []
+    },
+    "fusion": {
+      "component": "fusion",
+      "scores": {
+        "vector_contribution": 0.0,
+        "graph_contribution": 0.0,
+        "cross_source_uniqueness": 0.8958,
+        "context_completeness": 0.4,
+        "fused_relevance": 0.0
+      },
+      "overall": 0.2592,
+      "grade": "F",
+      "metadata": {
+        "dominant_source": "none",
+        "raw_cross_redundancy": 0.1042,
+        "vector_context_chars": 578,
+        "graph_context_chars": 242,
+        "fused_context_chars": 822
+      },
+      "latency_ms": 26.39,
+      "warnings": []
+    },
+    "fallback": {
+      "component": "fallback",
+      "scores": {
+        "trigger_correctness": 1.0,
+        "response_quality": 1.0,
+        "marker_correctness": 1.0
+      },
+      "overall": 1.0,
+      "grade": "A",
+      "metadata": {
+        "had_fallback": false,
+        "vector_ctx_empty": false,
+        "graph_ctx_empty": false,
+        "answer_word_count": 41
+      },
+      "latency_ms": 0.01,
+      "warnings": []
+    },
+    "multimodal": {
+      "component": "multimodal",
+      "scores": {
+        "image_query_relevance": 0.0,
+        "selection_precision": 0.0,
+        "selection_recall": 0.0,
+        "caption_diversity": 1.0
+      },
+      "overall": 0.25,
+      "grade": "F",
+      "metadata": {
+        "num_selected": 1,
+        "num_candidates": 1,
+        "selected_captions": [
+          "Figure 1. Osteosarcoma X-ray showing metaphyseal lesion."
+        ]
+      },
+      "latency_ms": 0.11,
+      "warnings": [
+        "ground_truth_captions not provided; selection_recall set to 0"
+      ]
+    },
+    "ragas": {
+      "faithfulness": 0.0,
+      "answer_relevance": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0,
+      "context_entity_recall": 1.0,
+      "answer_correctness": 0.2051,
+      "answer_similarity": 0.0317,
+      "noise_sensitivity": 1.0,
+      "ragas_score": 0.0,
+      "metadata": {
+        "used_llm_judge": false,
+        "unsupported_claims": [
+          "Osteosarcoma is treated with a combination of neoadjuvant chemotherapy, surgery, and adjuvant chemotherapy.",
+          "The main drugs used are methotrexate with leucovorin rescue, doxorubicin, cisplatin, and ifosfamide.",
+          "Patients with metastatic disease may also receive etoposide.",
+          "Response to neoadjuvant chemotherapy guides overall treatment."
+        ],
+        "num_contexts": 3,
+        "has_ground_truth": true
+      }
+    },
+    "trulens": {
+      "query": "What chemotherapy drugs are used to treat osteosarcoma?",
+      "final_answer": "Osteosarcoma is treated with a combination of neoadjuvant chemotherapy, surgery, and adjuvant chemotherapy. The main drugs used are methotrexate with leucovorin rescue, doxorubicin, cisplatin, and ifosfamide. Patients with metastatic disease may also receive etoposide. Response to neoadjuvant chemot...",
+      "feedback_scores": {
+        "context_relevance": 0.0,
+        "groundedness": 0.0,
+        "answer_relevance": 0.0,
+        "coherence": 0.0,
+        "conciseness": 1.0,
+        "medical_safety": 1.0,
+        "source_citation": 0.0,
+        "graph_entity_coverage": 0.0,
+        "graph_path_coherence": 0.0,
+        "fusion_balance": 0.0,
+        "image_context_alignment": 0.0
+      },
+      "composite_score": 0.1818,
+      "metadata": {
+        "num_feedback_fns": 11
+      },
+      "latency_ms": 2.12,
+      "timestamp": 1775504215.1216886
+    }
+  }
+}

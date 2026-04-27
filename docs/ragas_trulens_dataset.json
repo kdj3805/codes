@@ -1,0 +1,865 @@
+[
+  {
+    "question": "What is acute lymphoblastic leukemia and how common is it in adults in the United States?",
+    "expected_answer": "ALL is a malignant transformation of lymphoid progenitor cells in the bone marrow and blood. It is the second most common acute leukemia in adults with over 6,500 new cases per year in the US. In 2016, 6,590 new cases and over 1,400 deaths were recorded. The incidence follows a bimodal distribution peaking in childhood and again around age 50. Only 30–40% of adult patients achieve long-term remission despite high initial response rates.",
+    "contexts": [
+      "Acute lymphoblastic leukemia (ALL) is the second most common acute leukemia in adults, with an incidence of over 6500 cases per year in the United States alone.",
+      "In 2016 alone, an estimated 6590 new cases were diagnosed, with over 1400 deaths due to ALL.",
+      "The incidence of ALL follows a bimodal distribution, with the first peak occurring in childhood and a second peak occurring around the age of 50.",
+      "Despite a high rate of response to induction chemotherapy, only 30–40% of adult patients with ALL will achieve long-term remission."
+    ],
+    "ground_truth": "ALL is a malignant transformation and proliferation of lymphoid progenitor cells in the bone marrow, blood, and extramedullary sites. It is the second most common acute leukemia in adults, with over 6,500 cases per year in the US. Only 30–40% of adults achieve long-term remission.",
+    "metadata": {
+      "type": "vector",
+      "reasoning_type": "retrieval",
+      "requires_graph": false,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What are the four classic subtypes of melanoma and their prevalences?",
+    "expected_answer": "The four subtypes are: (1) Superficial spreading melanoma – 70% of cases; (2) Nodular melanoma – ~15%; (3) Lentigo maligna melanoma – ~10%; (4) Acral lentiginous melanoma – ~2%. SSM is most common in fair-skinned populations; ALM predominates in non-white skin tones.",
+    "contexts": [
+      "Clark divided melanoma into four main subtypes: superficial spreading melanoma (70% of all melanomas), nodular melanoma (approximately 15%), lentigo maligna melanoma (approximately 10%), and acral lentiginous melanoma (approximately 2% of all melanomas).",
+      "Superficial spreading melanoma (SSM) is the most common subtype of melanoma.",
+      "Acral lentiginous melanoma originates on the extremities of the body (palms, soles, and nail units). It is predominant among patients with non-white skin tones."
+    ],
+    "ground_truth": "The four subtypes are SSM (70%), Nodular melanoma (15%), Lentigo maligna melanoma (10%), and Acral lentiginous melanoma (2%). SSM is most common in fair-skinned populations; ALM predominates in non-white skin tones.",
+    "metadata": {
+      "type": "vector",
+      "reasoning_type": "retrieval",
+      "requires_graph": false,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "Why is the Breslow staging system preferred over Clark levels for melanoma prognosis?",
+    "expected_answer": "Breslow staging measures tumor depth in millimeters, is highly reproducible, and better correlates with patient prognosis. It directly determines the T stage in the AJCC staging system. Clark levels are anatomic landmark-based descriptions (I–V) that are less reproducible and now considered less prognostically precise.",
+    "contexts": [
+      "Breslow staging is a measure, in millimeters, of the depth of invasion of the nodule beneath the top of the granular cell layer of the epidermis. It is highly reproducible and better correlates with patient prognosis compared to the Clark level of invasion.",
+      "Breslow staging is used to determine the tumor (T) stage in the American Joint Committee on Cancer (AJCC) staging system."
+    ],
+    "ground_truth": "Breslow staging measures tumor depth in millimeters with high reproducibility and better prognostic correlation than Clark levels. It is used directly in AJCC T-stage classification.",
+    "metadata": {
+      "type": "vector",
+      "reasoning_type": "explanation",
+      "requires_graph": false,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What is the Philadelphia chromosome and how has the development of TKIs changed outcomes in Ph+ ALL?",
+    "expected_answer": "The Philadelphia chromosome is t(9;22)/BCR-ABL1 fusion, found in 15–50% of adult ALL. Historically, it conferred a 1-year survival of ~10%. Adding imatinib to Hyper-CVAD improved 3-year OS from 15% to 54%. Dasatinib plus Hyper-CVAD achieved 3-year OS of 71% in adults under 60. Ponatinib is approved for resistant Ph+ ALL.",
+    "contexts": [
+      "The cytogenetic aberration with the greatest impact on prognosis and treatment is the presence of the Philadelphia chromosome, t(9;22). The prevalence of t(9;22) in adult ALL can range from 15–50% and increases with age.",
+      "Historically, Ph-positive ALL has a 1-year survival of around 10%. However, with the development of TKIs, survival has improved.",
+      "Thomas et al. showed that when added to traditional HCVAD, imatinib resulted in improvement in 3-year OS (54 vs 15%).",
+      "In a subsequent multi-center trial HCVAD plus dasatinib achieved a 3-year OS of 71% in adult patients younger than 60."
+    ],
+    "ground_truth": "The Philadelphia chromosome t(9;22)/BCR-ABL1 is present in 15–50% of adult ALL and historically gave <10% 1-year survival. TKIs have transformed outcomes: imatinib improved 3-year OS to 54% vs 15% with HCVAD alone; dasatinib+HCVAD achieved 71% 3-year OS.",
+    "metadata": {
+      "type": "vector",
+      "reasoning_type": "explanation",
+      "requires_graph": false,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What eating side effects does cisplatin cause and at what frequency?",
+    "expected_answer": "Cisplatin causes: Nausea (high severity, 70–90%, acute and delayed); Vomiting (high severity, 60–80%, acute 1–4 hours); Taste and smell changes (moderate, 50%); Weight loss (moderate, 40%, cumulative). It is among the most emetogenic agents. Pre/post-hydration with 2–4L IV normal saline is mandatory per NG006.",
+    "contexts": [
+      "Graph: ChemoDrug Cisplatin CAUSES_EATING_EFFECT Nausea {severity:'High', frequency:'70-90%', onset:'Acute and delayed'}",
+      "Graph: ChemoDrug Cisplatin CAUSES_EATING_EFFECT Vomiting {severity:'High', frequency:'60-80%', onset:'Acute 1-4h'}",
+      "Graph: ChemoDrug Cisplatin CAUSES_EATING_EFFECT Taste and Smell Changes {severity:'Moderate', frequency:'50%'}",
+      "Graph: ChemoDrug Cisplatin CAUSES_EATING_EFFECT Weight Loss {severity:'Moderate', frequency:'40%', onset:'Cumulative'}",
+      "NutritionGuideline NG006: Cisplatin requires pre-hydration with 2-4L IV normal saline and post-hydration to prevent nephrotoxicity."
+    ],
+    "ground_truth": "Cisplatin causes nausea (70–90%), vomiting (60–80%), taste and smell changes (50%), and weight loss (40%). Pre- and post-hydration with 2–4L IV normal saline is mandatory.",
+    "metadata": {
+      "type": "graph",
+      "reasoning_type": "retrieval",
+      "requires_graph": true,
+      "requires_vector": false,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What foods help relieve chemotherapy-induced nausea?",
+    "expected_answer": "Ginger tea or ginger ale (1–2g ginger daily, moderate evidence), bananas (BRAT diet, bland), and toast/white bread (crackers before rising for morning nausea). Eating 5–6 small meals daily and avoiding an empty stomach are also recommended. Fried/fatty foods and spicy foods worsen nausea.",
+    "contexts": [
+      "Graph: EatingAdverseEffect Nausea RELIEVED_BY FoodItem Ginger Tea/Ginger Ale {evidence:'Moderate', notes:'1-2g ginger daily shown to reduce chemo nausea'}",
+      "Graph: EatingAdverseEffect Nausea RELIEVED_BY FoodItem Bananas {evidence:'Low-moderate', notes:'BRAT diet component; bland and gentle'}",
+      "Graph: EatingAdverseEffect Nausea RELIEVED_BY FoodItem Toast/White Bread {evidence:'Low-moderate', notes:'Crackers before rising helps morning nausea'}",
+      "Graph: EatingAdverseEffect Nausea WORSENED_BY FoodItem Fried/Fatty Foods {evidence:'High'}",
+      "NCI Eating Hints: Eat 5 or 6 small meals each day instead of 3 large meals."
+    ],
+    "ground_truth": "Ginger tea/ginger ale, bananas, and toast/crackers relieve nausea. Eating 5–6 small meals and avoiding an empty stomach is advised. Fried/fatty and spicy foods worsen nausea.",
+    "metadata": {
+      "type": "graph",
+      "reasoning_type": "retrieval",
+      "requires_graph": true,
+      "requires_vector": false,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What foods must be avoided during chemotherapy-induced diarrhea?",
+    "expected_answer": "Avoid high-fiber foods (whole grains, legumes), spicy foods, dairy/lactose-containing foods, fried foods, caffeine, and alcohol. These worsen diarrhea through different mechanisms. Low-fiber foods such as white rice, bananas, and plain yogurt are recommended, along with 8–12 cups of liquids daily with electrolyte replacement.",
+    "contexts": [
+      "Graph: EatingAdverseEffect Diarrhoea WORSENED_BY FoodItem High-Fibre Foods (Whole Grains, Legumes) {evidence:'High'}",
+      "Graph: EatingAdverseEffect Diarrhoea WORSENED_BY FoodItem Spicy Foods {evidence:'High'}",
+      "Graph: EatingAdverseEffect Diarrhoea WORSENED_BY FoodItem Dairy/Lactose-containing Foods {evidence:'High'}",
+      "NCI Eating Hints: Eat low-fiber foods. Avoid foods high in fiber; greasy, fatty, or fried foods; milk products; spicy foods; drinks that contain alcohol."
+    ],
+    "ground_truth": "Avoid high-fiber foods, spicy foods, dairy/lactose, fried foods, caffeine, and alcohol. Eat white rice, bananas, and plain low-lactose yogurt. Stay hydrated with 8–12 cups daily.",
+    "metadata": {
+      "type": "graph",
+      "reasoning_type": "retrieval",
+      "requires_graph": true,
+      "requires_vector": false,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What is the interaction between warfarin and capecitabine and how dangerous is it?",
+    "expected_answer": "SEVERE interaction. Capecitabine's 5-FU metabolites inhibit CYP2C9, increasing S-warfarin AUC by up to 50% and potentially raising INR above 10. Management: substitute LMWH. If unavoidable, reduce warfarin by 30–50% and check INR twice weekly. Capecitabine-induced diarrhea further destabilizes INR by reducing vitamin K absorption.",
+    "contexts": [
+      "DrugInteraction DI_WAR_CAP: Warfarin + Capecitabine: Capecitabine inhibits CYP2C9, dramatically elevating warfarin exposure and bleeding risk (INR can exceed 10). Severity: Severe.",
+      "Mechanism: CYP2C9 inhibition by 5-FU metabolites increases S-warfarin AUC by up to 50%.",
+      "Clinical action: Avoid; substitute LMWH. If unavoidable, reduce warfarin 30-50%; check INR twice weekly.",
+      "Eating relevance: Consistent vitamin K diet critical; diarrhoea from capecitabine reduces vitamin K absorption causing INR fluctuation."
+    ],
+    "ground_truth": "Severe interaction: capecitabine inhibits CYP2C9, increasing S-warfarin AUC by up to 50% with INR potentially exceeding 10. Substitute LMWH; if unavoidable reduce warfarin 30–50% with twice-weekly INR monitoring.",
+    "metadata": {
+      "type": "graph",
+      "reasoning_type": "retrieval",
+      "requires_graph": true,
+      "requires_vector": false,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "Why is voriconazole contraindicated with vincristine in leukemia patients?",
+    "expected_answer": "Voriconazole strongly inhibits CYP3A4 and P-gp, increasing vincristine AUC 3–4 fold and causing severe neurotoxicity including paralytic ileus and constipation. This combination is absolutely contraindicated. Use caspofungin or micafungin instead when antifungal prophylaxis is needed.",
+    "contexts": [
+      "DrugInteraction DI_VORI_VIN: Voriconazole + Vincristine: Voriconazole inhibits CYP3A4, dramatically increasing vincristine exposure; risk of severe neurotoxicity. Severity: Severe.",
+      "Mechanism: CYP3A4 + P-gp inhibition by azoles increases vincristine AUC 3-4 fold.",
+      "Clinical action: Contraindicated: do not use voriconazole while patient is on vincristine. Use caspofungin or micafungin instead."
+    ],
+    "ground_truth": "Voriconazole inhibits CYP3A4/P-gp, increasing vincristine AUC 3–4 fold causing life-threatening neurotoxicity. Absolutely contraindicated. Use caspofungin or micafungin instead.",
+    "metadata": {
+      "type": "graph",
+      "reasoning_type": "explanation",
+      "requires_graph": true,
+      "requires_vector": false,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What mandatory nutritional supplementation is required with pemetrexed chemotherapy?",
+    "expected_answer": "Per NutritionGuideline NG003 (Level 1A mandatory): folic acid 400–1000 mcg daily starting 7 days before first dose throughout treatment, and vitamin B12 1000 mcg IM every 9 weeks. These reduce mucositis and neutropenia by protecting normal folate-dependent processes.",
+    "contexts": [
+      "NutritionGuideline NG003: Pemetrexed requires folic acid 400-1000mcg daily starting 7 days before first dose and B12 1000mcg IM every 9 weeks. Evidence level: Level 1A – mandatory.",
+      "Graph: NutritionGuideline NG003 REQUIRED_FOR ChemoDrug Pemetrexed.",
+      "ChemoDrug Pemetrexed notes: Multi-targeted folate pathway inhibitor; requires B12 and folic acid supplementation."
+    ],
+    "ground_truth": "Folic acid 400–1000 mcg daily (starting 7 days before first dose) and vitamin B12 1000 mcg IM every 9 weeks are mandatory (Level 1A) to reduce pemetrexed-induced mucositis and neutropenia.",
+    "metadata": {
+      "type": "graph",
+      "reasoning_type": "retrieval",
+      "requires_graph": true,
+      "requires_vector": false,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "Why is ibuprofen absolutely contraindicated with high-dose methotrexate?",
+    "expected_answer": "Ibuprofen competitively inhibits the OAT3 renal transporter, reducing methotrexate clearance and causing severe MTX accumulation, leading to life-threatening mucositis and myelosuppression. This interaction is SEVERE and absolutely contraindicated with high-dose MTX. Even low-dose NSAIDs should be avoided with any MTX regimen.",
+    "contexts": [
+      "DrugInteraction DI_IBU_MTX: Ibuprofen + Methotrexate: NSAIDs reduce renal tubular secretion of MTX, causing severe MTX toxicity (mucositis, myelosuppression). Severity: Severe.",
+      "Mechanism: Competitive inhibition of renal OAT3 transporter reduces MTX clearance.",
+      "Clinical action: Absolute contraindication with high-dose MTX; avoid even low-dose NSAIDs; monitor MTX levels.",
+      "Eating relevance: MTX toxicity causes severe mucositis worsening nutritional status; IV nutrition may be required."
+    ],
+    "ground_truth": "NSAIDs inhibit OAT3, reducing MTX clearance and causing severe mucositis and myelosuppression. Absolute contraindication with high-dose MTX; avoid even low-dose NSAIDs.",
+    "metadata": {
+      "type": "graph",
+      "reasoning_type": "explanation",
+      "requires_graph": true,
+      "requires_vector": false,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "Why must leukemia patients on mercaptopurine maintenance avoid taking it with milk?",
+    "expected_answer": "Per NutritionGuideline NG007, milk reduces 6-MP absorption. The drug should be taken on an empty stomach, with milk avoided for 1 hour before and after dosing. Reduced bioavailability compromises efficacy in ALL maintenance therapy, potentially allowing leukemic relapse.",
+    "contexts": [
+      "NutritionGuideline NG007: 6-Mercaptopurine absorption is reduced by milk; take on an empty stomach; avoid milk for 1 hour before and after dosing.",
+      "Graph: NutritionGuideline NG007 WARNS_ABOUT FoodItem Milk.",
+      "ChemoDrug Mercaptopurine notes: avoid milk (reduces absorption)."
+    ],
+    "ground_truth": "Milk reduces 6-MP absorption. It should be taken on an empty stomach with milk avoided 1 hour before and after dosing to ensure consistent therapeutic efficacy in ALL maintenance.",
+    "metadata": {
+      "type": "graph",
+      "reasoning_type": "explanation",
+      "requires_graph": true,
+      "requires_vector": false,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "Why should patients on vemurafenib or lorlatinib avoid grapefruit?",
+    "expected_answer": "Per NutritionGuideline NG005, grapefruit contains furanocoumarins that irreversibly inhibit intestinal CYP3A4. Vemurafenib, lorlatinib, crizotinib, and trametinib are all CYP3A4-metabolized oral targeted agents; grapefruit can substantially increase their plasma levels, risking severe toxicity. Patients must avoid grapefruit, grapefruit juice, and Seville oranges throughout therapy.",
+    "contexts": [
+      "NutritionGuideline NG005: Avoid grapefruit, grapefruit juice, and Seville oranges during therapy with CYP3A4-metabolised oral targeted agents. Applicable to: Vemurafenib, Lorlatinib, Crizotinib, Trametinib. Source: FDA drug interaction guidance.",
+      "FoodItem Grapefruit notes: CYP3A4 inhibitor – interacts with multiple oral targeted agents including vemurafenib, lorlatinib, trametinib; avoid during treatment.",
+      "Graph: NutritionGuideline NG005 WARNS_ABOUT FoodItem Grapefruit."
+    ],
+    "ground_truth": "Grapefruit irreversibly inhibits intestinal CYP3A4, increasing plasma levels of CYP3A4-metabolized targeted agents (vemurafenib, lorlatinib, crizotinib, trametinib) and risking toxicity. Avoid throughout therapy.",
+    "metadata": {
+      "type": "graph",
+      "reasoning_type": "explanation",
+      "requires_graph": true,
+      "requires_vector": false,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What foods help relieve sore mouth (mucositis) during chemotherapy?",
+    "expected_answer": "Cold foods such as popsicles and ice chips (high evidence; numb pain and reduce inflammation), and soft proteins like scrambled eggs (high evidence; easy to chew and swallow). Avoid citrus/acidic foods, spicy foods, and alcohol, which all worsen mucositis. Saltwater or sodium bicarbonate rinses 3–4 times daily are also recommended.",
+    "contexts": [
+      "Graph: EatingAdverseEffect Sore Mouth (Mucositis) RELIEVED_BY FoodItem Cold Foods (Popsicles, Ice Chips) {evidence:'High', notes:'Cold numbs pain; reduces inflammation; improves intake'}",
+      "Graph: EatingAdverseEffect Sore Mouth (Mucositis) RELIEVED_BY FoodItem Scrambled Eggs/Soft Protein {evidence:'High'}",
+      "Graph: EatingAdverseEffect Sore Mouth (Mucositis) WORSENED_BY FoodItem Citrus Fruits/Acidic Foods, Spicy Foods, Alcohol {evidence:'High'}",
+      "NutritionGuideline NG010: Oral rinse protocol: 0.9% NaCl rinse or sodium bicarbonate rinse 3-4 times daily reduces mucositis severity."
+    ],
+    "ground_truth": "Cold foods (popsicles, ice chips) and soft proteins (scrambled eggs) relieve mucositis. Avoid acidic, spicy foods and alcohol. Use saltwater/sodium bicarbonate rinses 3–4 times daily.",
+    "metadata": {
+      "type": "graph",
+      "reasoning_type": "retrieval",
+      "requires_graph": true,
+      "requires_vector": false,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What is the allopurinol–mercaptopurine interaction and how life-threatening is it?",
+    "expected_answer": "SEVERE/CONTRAINDICATED. Allopurinol inhibits xanthine oxidase (primary 6-MP inactivation enzyme), causing a 4-fold increase in active thiopurine metabolites, leading to severe bone marrow suppression and mucositis. If allopurinol is unavoidable, reduce 6-MP by 75%. Consider rasburicase as an alternative for TLS prevention.",
+    "contexts": [
+      "DrugInteraction DI_ALLOPUR_AZATH: Allopurinol + Azathioprine/Mercaptopurine: Allopurinol inhibits xanthine oxidase, the main enzyme metabolising 6-MP – SEVERE toxicity. Severity: Severe.",
+      "Clinical action: CONTRAINDICATED: If allopurinol required, reduce 6-MP dose by 75%. Consider rasburicase instead.",
+      "Mechanism: Xanthine oxidase inhibition blocks 6-MP inactivation, increasing active thiopurine metabolites 4-fold."
+    ],
+    "ground_truth": "Contraindicated – severe. Allopurinol inhibits xanthine oxidase, causing 4-fold thiopurine accumulation with life-threatening myelosuppression and mucositis. If needed, reduce 6-MP by 75% or use rasburicase.",
+    "metadata": {
+      "type": "graph",
+      "reasoning_type": "explanation",
+      "requires_graph": true,
+      "requires_vector": false,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What dermoscopy pattern does superficial spreading melanoma show?",
+    "expected_answer": "The dermoscopy of SSM (Figure 1b, melanoma-skin-cancer-review_picture_2.png) demonstrates an atypical reticular pattern with radial streaks and a central area of regression. This reflects the irregular pigment network, peripheral tumor spread, and focal immune-mediated destruction characteristic of SSM.",
+    "contexts": [
+      "Image caption [melanoma-skin-cancer-review_picture_2.png]: Figure 1. (b) Dermoscopy of superficial spreading melanoma demonstrating an atypical reticular pattern with radial streaks and a central area of regression.",
+      "Histologically, SSM is characterized by asymmetric, poorly demarcated melanocytes that lack cellular maturation and commonly with evidence of intraepithelial spread in a pagetoid manner."
+    ],
+    "ground_truth": "SSM dermoscopy (Figure 1b) shows an atypical reticular pattern with radial streaks and a central regression area.",
+    "metadata": {
+      "type": "image",
+      "reasoning_type": "retrieval",
+      "requires_graph": false,
+      "requires_vector": false,
+      "requires_image": true,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What does the histology image of nodular melanoma in Figure 6 show?",
+    "expected_answer": "Figure 6 (melanoma-skin-cancer-review_picture_10.png, H&E 10×) shows densely packed dermal proliferation of atypical melanocytes extending to the reticular dermis. Clark's level IV, Breslow thickness 2.9 mm, and 10 dermal mitoses per 1 mm² are demonstrated, all indicating high-risk nodular melanoma.",
+    "contexts": [
+      "Image caption [melanoma-skin-cancer-review_picture_10.png]: Figure 6. Nodular melanoma, histology (hematoxylin-eosin stain), 10×. Nodular melanoma with densely packed dermal proliferation of atypical melanocytes extending to the reticular dermis (Clark's level: IV, Breslow thickness 2.9 mm). Several dermal mitoses (10 mitosis × 1 mm²) are shown."
+    ],
+    "ground_truth": "Figure 6 shows nodular melanoma (H&E 10×) with densely packed atypical melanocytes in the reticular dermis, Clark's level IV, Breslow 2.9 mm, and 10 mitoses/mm².",
+    "metadata": {
+      "type": "image",
+      "reasoning_type": "retrieval",
+      "requires_graph": false,
+      "requires_vector": false,
+      "requires_image": true,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What does Table 2 in the lung cancer ALK review describe?",
+    "expected_answer": "Table 2 (lung-cancer-review_table_2.png) describes the main methods used to identify ALK mutation and mechanisms of resistance, with their advantages and limitations. Methods include FISH (gold standard, high specificity, cannot identify fusion partners), IHC (sensitive, cheap, cannot identify fusion partner), RT-PCR (identifies fusion partners, high sensitivity, needs high-quality RNA), NGS (detects multiple mutations, expensive), and liquid biopsy (minimally invasive, real-time, needs standardization).",
+    "contexts": [
+      "Image caption [lung-cancer-review_table_2.png]: TABLE 2. The main methods used to identify ALK mutation and mechanism of resistance described according to their main advantages and limitations.",
+      "FISH testing: High specificity... ALK fusion partners lack of detection.",
+      "IHC: High sensitivity, cheaper, faster... Moderate specificity.",
+      "RT-PCR: ALK rearrangement + fusion partners identification, High sensitivity... Unknown ALK fusion partners lack of detection.",
+      "NGS: ALK mutation + copy number gain detection... Complex data analysis. Expensive.",
+      "Liquid biopsy: Minimally invasive, Repeatability, Real-time results... High costs, Need for standardization."
+    ],
+    "ground_truth": "Table 2 compares ALK detection methods (FISH, IHC, RT-PCR, NGS, Liquid biopsy) with their advantages and limitations for identifying ALK rearrangement and resistance mechanisms.",
+    "metadata": {
+      "type": "image",
+      "reasoning_type": "retrieval",
+      "requires_graph": false,
+      "requires_vector": false,
+      "requires_image": true,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What does Figure 1 of the breast cancer review show?",
+    "expected_answer": "Figure 1 (breast-cancer-review_picture_1.png) illustrates the different topical drug delivery systems used in breast cancer studies, including transfersomes, microemulsions, nanogels, microneedles, and iontophoresis.",
+    "contexts": [
+      "Image caption [breast-cancer-review_picture_1.png]: Figure 1. Different topical drug delivery system used in breast cancer studies.",
+      "Various drug delivery systems, including transfersomes, microemulsions, nanogels, microneedles, and iontophoresis can efficiently transport drugs to breast cancer cells."
+    ],
+    "ground_truth": "Figure 1 illustrates topical drug delivery systems for breast cancer: transfersomes, microemulsions, nanogels, microneedles, and iontophoresis.",
+    "metadata": {
+      "type": "image",
+      "reasoning_type": "retrieval",
+      "requires_graph": false,
+      "requires_vector": false,
+      "requires_image": true,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "A breast cancer patient is on tamoxifen and is prescribed sertraline for depression. What is the concern?",
+    "expected_answer": "Sertraline inhibits CYP2D6, reducing endoxifen (the active tamoxifen metabolite) levels by ~60%, substantially reducing tamoxifen's anti-cancer efficacy in ER-positive breast cancer. This is a moderate-to-severe interaction. Venlafaxine or escitalopram are preferred alternatives as weak CYP2D6 inhibitors that do not significantly reduce endoxifen levels.",
+    "contexts": [
+      "DrugInteraction DI_SERT_TAMOX: Sertraline + Tamoxifen: Sertraline inhibits CYP2D6, reducing conversion of tamoxifen to active metabolite endoxifen. Severity: Moderate-Severe.",
+      "Mechanism: CYP2D6 inhibition reduces endoxifen levels by ~60%; reduces tamoxifen efficacy.",
+      "Clinical action: Prefer venlafaxine or escitalopram (weak CYP2D6 inhibitors) for depression in tamoxifen patients.",
+      "Graph: Cancer Breast Cancer TREATED_WITH ChemoDrug involved in tamoxifen pathway; Graph: Biomarker ER/PR positivity therapeutic_relevance:'Endocrine therapy: Tamoxifen'."
+    ],
+    "ground_truth": "Sertraline inhibits CYP2D6, reducing endoxifen by ~60% and compromising tamoxifen efficacy. Use venlafaxine or escitalopram instead.",
+    "metadata": {
+      "type": "hybrid",
+      "reasoning_type": "multi-hop",
+      "requires_graph": true,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What should I eat if I have both a sore mouth and diarrhea during chemotherapy?",
+    "expected_answer": "Eat foods that are simultaneously soft (for mucositis) and low-fiber (for diarrhea): scrambled eggs, white rice, bananas, plain low-lactose yogurt, and cold popsicles. Avoid acidic/spicy foods (worsen mucositis), dairy/lactose and high-fiber foods (worsen diarrhea), and alcohol (worsens both). Drink 8–12 cups of liquids daily to prevent dehydration.",
+    "contexts": [
+      "Graph: EatingAdverseEffect Sore Mouth (Mucositis) RELIEVED_BY FoodItem Cold Foods, Scrambled Eggs; WORSENED_BY Citrus Fruits, Spicy Foods, Alcohol",
+      "Graph: EatingAdverseEffect Diarrhoea RELIEVED_BY FoodItem White Rice, Bananas, Yogurt/Probiotics; WORSENED_BY High-Fibre Foods, Dairy, Spicy Foods",
+      "NCI Eating Hints: Drink 8 to 12 cups of liquid a day. Eat 5 or 6 small meals each day."
+    ],
+    "ground_truth": "Eat soft, low-fiber foods: scrambled eggs, white rice, bananas, and popsicles. Avoid acidic/spicy foods, high-fiber foods, dairy, and alcohol. Stay well hydrated.",
+    "metadata": {
+      "type": "hybrid",
+      "reasoning_type": "multi-hop",
+      "requires_graph": true,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "A lung cancer patient on carboplatin-paclitaxel also takes carbamazepine for epilepsy. What should be done?",
+    "expected_answer": "This is a SEVERE interaction. Carbamazepine strongly induces CYP3A4, increasing paclitaxel metabolism 2–3 fold and severely reducing paclitaxel plasma levels, compromising efficacy of the first-line NSCLC regimen. Switch carbamazepine to a non-enzyme-inducing AED (levetiracetam, lamotrigine, or lacosamide) before starting chemotherapy.",
+    "contexts": [
+      "DrugInteraction DI_CBZ_PAC: Carbamazepine + Paclitaxel: Carbamazepine induces CYP3A4, significantly reducing paclitaxel plasma levels and therapeutic efficacy. Severity: Severe.",
+      "Clinical action: Avoid; switch to non-enzyme-inducing antiepileptic (levetiracetam, lamotrigine, lacosamide).",
+      "Graph: Cancer Lung Cancer TREATED_WITH ChemoDrug Paclitaxel {line:'first', regimen:'Carboplatin/Paclitaxel'}",
+      "Graph: TreatmentProtocol Carboplatin/Paclitaxel (NSCLC) INCLUDES_DRUG Paclitaxel."
+    ],
+    "ground_truth": "Severe interaction: carbamazepine induces CYP3A4, reducing paclitaxel levels 2–3 fold. Switch to levetiracetam, lamotrigine, or lacosamide before starting chemotherapy.",
+    "metadata": {
+      "type": "hybrid",
+      "reasoning_type": "multi-hop",
+      "requires_graph": true,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "My leukemia doctor prescribed 6-MP for maintenance. My GP wants to prescribe allopurinol for gout. Is this safe?",
+    "expected_answer": "No – this is CONTRAINDICATED. Allopurinol inhibits xanthine oxidase (primary 6-MP metabolizing enzyme), causing a 4-fold increase in thiopurine metabolites, leading to life-threatening bone marrow suppression and mucositis. If allopurinol is absolutely needed, reduce 6-MP by 75% with close monitoring. Consider rasburicase or febuxostat as alternatives for uric acid management. Urgently inform the oncologist.",
+    "contexts": [
+      "DrugInteraction DI_ALLOPUR_AZATH: Allopurinol + Mercaptopurine: CONTRAINDICATED. Allopurinol inhibits xanthine oxidase, increasing thiopurine metabolites 4-fold. Severity: Severe.",
+      "Clinical action: CONTRAINDICATED: If allopurinol required, reduce 6-MP dose by 75%. Consider rasburicase instead.",
+      "Graph: Cancer Acute Leukemia TREATED_WITH ChemoDrug Mercaptopurine {line:'maintenance'}",
+      "Graph: NonChemoDrug Allopurinol HAS_INTERACTION_WITH ChemoDrug Mercaptopurine."
+    ],
+    "ground_truth": "Absolutely contraindicated. Allopurinol causes 4-fold 6-MP accumulation and life-threatening myelosuppression. Inform oncologist urgently. If unavoidable, reduce 6-MP by 75% or use rasburicase.",
+    "metadata": {
+      "type": "hybrid",
+      "reasoning_type": "multi-hop",
+      "requires_graph": true,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What biomarkers should be tested before starting systemic therapy for advanced melanoma?",
+    "expected_answer": "Before starting systemic therapy for advanced melanoma, BRAF V600E mutation status must be tested (guides use of vemurafenib/dabrafenib + trametinib vs immunotherapy) and PD-L1 expression assessed (guides pembrolizumab/nivolumab eligibility and dosing). BRAF-mutant tumors can receive targeted BRAF+MEK inhibitors or PD-1 checkpoint inhibitors. BRAF wild-type tumors receive PD-1-based immunotherapy.",
+    "contexts": [
+      "Graph: Cancer Skin Cancer HAS_BIOMARKER Biomarker BRAF V600E mutation {therapeutic_relevance:'Vemurafenib, Dabrafenib, Trametinib'}",
+      "Graph: Cancer Skin Cancer HAS_BIOMARKER Biomarker PD-L1 expression {therapeutic_relevance:'Pembrolizumab, Nivolumab, Atezolizumab'}",
+      "BRAF wild-type tumors should be treated with PD-1 inhibitors, whereas BRAF-mutant tumors can be treated with either a PD-1 inhibitor or targeted therapy with BRAF plus MEK inhibitors.",
+      "Mutations in the BRAF gene are the most frequent somatic mutations in melanoma, activating specifically the MAPK pathway."
+    ],
+    "ground_truth": "Test BRAF V600E mutation status and PD-L1 expression before starting advanced melanoma therapy. BRAF-mutant patients can receive targeted or immunotherapy; BRAF wild-type receive PD-1-based therapy.",
+    "metadata": {
+      "type": "hybrid",
+      "reasoning_type": "multi-hop",
+      "requires_graph": true,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What happens nutritionally when a diabetic patient receives dexamethasone as chemotherapy premedication?",
+    "expected_answer": "Dexamethasone activates glucocorticoid receptors, increasing hepatic gluconeogenesis and reducing insulin sensitivity, causing hyperglycemia in diabetic patients (DI_DEXA_INSULIN, moderate severity). Management: blood glucose monitoring before and after dexamethasone; sliding-scale insulin; dietitian-guided carbohydrate management. Dexamethasone also increases appetite and food cravings, complicating diabetes dietary control and contributing to weight gain.",
+    "contexts": [
+      "DrugInteraction DI_DEXA_INSULIN: Dexamethasone (chemo premedication) causes hyperglycaemia in diabetic patients, requiring insulin dose adjustment. Severity: Moderate.",
+      "Mechanism: Glucocorticoid receptor activation increases hepatic gluconeogenesis and reduces peripheral insulin sensitivity.",
+      "Eating relevance: Dexamethasone increases appetite and causes cravings; diabetes dietary management becomes complex during chemo.",
+      "Graph: DrugInteraction DI_DEXA_INSULIN COMPOUNDS_EATING_EFFECT Weight Gain."
+    ],
+    "ground_truth": "Dexamethasone causes hyperglycemia in diabetics via gluconeogenesis and insulin resistance. Requires glucose monitoring, sliding-scale insulin, and dietitian-guided carbohydrate management.",
+    "metadata": {
+      "type": "hybrid",
+      "reasoning_type": "multi-hop",
+      "requires_graph": true,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What are the recommended dietary interventions for managing immune colitis caused by checkpoint inhibitors?",
+    "expected_answer": "Per NutritionGuideline NG008, patients with immune colitis from checkpoint inhibitors (ipilimumab, pembrolizumab, nivolumab) should follow a low-residue diet, avoiding high-fiber foods, lactose, and fatty foods. Corticosteroids are required for Grade 2+ colitis. Ipilimumab causes diarrhea in 30–40% of patients via immune colitis. In severe cases, bowel rest and parenteral nutrition may be needed.",
+    "contexts": [
+      "NutritionGuideline NG008: For patients with immune colitis from checkpoint inhibitors: low-residue diet, avoid high-fibre foods, lactose, and fatty foods; corticosteroids for grade 2+.",
+      "Graph: ChemoDrug Ipilimumab CAUSES_EATING_EFFECT Diarrhoea {severity:'High', frequency:'30-40%', mechanism:'Immune colitis'}",
+      "Graph: ChemoDrug Pembrolizumab CAUSES_EATING_EFFECT Diarrhoea {severity:'Moderate', frequency:'15%', mechanism:'Immune colitis'}"
+    ],
+    "ground_truth": "Low-residue diet: avoid high-fiber foods, lactose, and fatty foods. Corticosteroids needed for Grade 2+ colitis. Ipilimumab causes diarrhea in 30–40% of patients.",
+    "metadata": {
+      "type": "hybrid",
+      "reasoning_type": "multi-hop",
+      "requires_graph": true,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What do the histology images of lentigo maligna in Figure 4 show?",
+    "expected_answer": "Figure 4 (melanoma-skin-cancer-review_picture_7.png, H&E 20×) shows intraepithelial lentigo maligna with heavily pigmented melanocytes extending to the follicular epithelium and associated with severe solar elastosis in the superficial dermis. This reflects the chronic UV damage and lentiginous melanocyte proliferation characteristic of LMM in sun-exposed areas.",
+    "contexts": [
+      "Image caption [melanoma-skin-cancer-review_picture_7.png]: Figure 4. Lentigo maligna, histology, (hematoxylin-eosin stain), 20×. Intraepithelial lentigo maligna with heavily pigmented melanocytes extending to the follicular epithelium and associated with severe solar elastosis in superficial dermis.",
+      "Histologically, lentigo maligna melanocytes are usually hyperchromatic and array along the dermal epidermal junction in a lentiginous pattern. The epidermis is usually atrophic, and the dermis displays signs of solar elastosis."
+    ],
+    "ground_truth": "Figure 4 (H&E 20×) shows intraepithelial lentigo maligna with heavily pigmented melanocytes extending to follicular epithelium and severe solar elastosis in superficial dermis.",
+    "metadata": {
+      "type": "image",
+      "reasoning_type": "retrieval",
+      "requires_graph": false,
+      "requires_vector": false,
+      "requires_image": true,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "I heard that eating grapefruit is dangerous if I'm taking cancer medication. Which cancer drugs are affected?",
+    "expected_answer": "Grapefruit inhibits intestinal CYP3A4 and can dangerously increase plasma levels of several oral cancer targeted agents. Per NutritionGuideline NG005, grapefruit, grapefruit juice, and Seville oranges must be avoided during therapy with: Vemurafenib (BRAF inhibitor for melanoma), Lorlatinib (third-generation ALK TKI for NSCLC), Crizotinib (first-generation ALK TKI), and Trametinib (MEK inhibitor for melanoma). This is based on FDA drug interaction guidance.",
+    "contexts": [
+      "NutritionGuideline NG005: Avoid grapefruit, grapefruit juice, and Seville oranges during therapy with CYP3A4-metabolised oral targeted agents. Applicable to: Vemurafenib, Lorlatinib, Crizotinib, Trametinib.",
+      "FoodItem Grapefruit notes: CYP3A4 inhibitor – interacts with multiple oral targeted agents including vemurafenib, lorlatinib, trametinib; avoid during treatment."
+    ],
+    "ground_truth": "Avoid grapefruit with Vemurafenib, Lorlatinib, Crizotinib, and Trametinib (all CYP3A4-metabolized targeted agents). Grapefruit inhibits CYP3A4, increasing drug levels and risking toxicity.",
+    "metadata": {
+      "type": "hybrid",
+      "reasoning_type": "multi-hop",
+      "requires_graph": true,
+      "requires_vector": false,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What are all the drugs used in the AC-T breast cancer protocol and what eating side effects should be anticipated?",
+    "expected_answer": "AC-T includes Doxorubicin, Cyclophosphamide (×4 cycles) then Paclitaxel (×4 cycles). Expected eating side effects: from Doxorubicin – nausea (60%, high severity), mucositis (40%, Day 5–10), appetite loss (30%); from Cyclophosphamide – nausea and vomiting (hemorrhagic cystitis risk); from Paclitaxel – peripheral neuropathy (may affect food preparation), potential constipation. Patients should prepare for mucositis management and nausea prophylaxis.",
+    "contexts": [
+      "Graph: TreatmentProtocol AC-T (Breast): Doxorubicin/Cyclophosphamide × 4 cycles then Paclitaxel × 4; standard adjuvant breast cancer.",
+      "Graph: ChemoDrug Doxorubicin CAUSES_EATING_EFFECT Nausea {severity:'High', frequency:'60%'}",
+      "Graph: ChemoDrug Doxorubicin CAUSES_EATING_EFFECT Sore Mouth (Mucositis) {severity:'High', frequency:'40%', onset:'Day 5-10'}",
+      "Graph: ChemoDrug Doxorubicin CAUSES_EATING_EFFECT Appetite Loss {severity:'Moderate', frequency:'30%'}",
+      "Graph: SideEffect Peripheral Neuropathy linked to ChemoDrug Paclitaxel."
+    ],
+    "ground_truth": "AC-T includes doxorubicin, cyclophosphamide, then paclitaxel. Key eating side effects: nausea (60%), mucositis (40%, Day 5–10), appetite loss (30%) from doxorubicin; peripheral neuropathy affecting food preparation from paclitaxel.",
+    "metadata": {
+      "type": "hybrid",
+      "reasoning_type": "multi-hop",
+      "requires_graph": true,
+      "requires_vector": false,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "Can vitamin supplements or herbal products help cure cancer or slow its progression?",
+    "expected_answer": "No. The NCI Eating Hints states there are no studies proving any special diet, food, vitamin, mineral, dietary supplement, herb, or combination can slow, cure, or prevent cancer recurrence. Some products can actually interfere with how cancer treatment works. Patients should inform their healthcare team about any supplements before taking them.",
+    "contexts": [
+      "NCI Eating Hints: There are no studies that prove that any special diet, food, vitamin, mineral, dietary supplement, herb, or combination of these can slow cancer, cure it, or keep it from coming back.",
+      "In fact, some of these products can cause other problems by changing how your cancer treatment works.",
+      "Tell your doctor, nurse, or dietitian about any vitamin, mineral, dietary supplements, or herbs you are already taking or plan to take."
+    ],
+    "ground_truth": "No evidence supports supplements or herbs for curing or slowing cancer. Some may interfere with treatment. Always inform the healthcare team before taking any supplements.",
+    "metadata": {
+      "type": "fallback",
+      "reasoning_type": "retrieval",
+      "requires_graph": false,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What is the cure rate for metastatic osteosarcoma treated with the latest CAR-T or immunotherapy protocols?",
+    "expected_answer": "The provided source documents do not contain specific cure rate data for metastatic osteosarcoma treated with current CAR-T or immunotherapy protocols. The osteosarcoma review (2018) notes current overall five-year survival exceeds 65% (not specific to metastatic disease), and mentions promising preclinical results with listeria-based vaccines in canine models and tyrosine kinase inhibitors in vitro. No specific curative immunotherapy outcome data for metastatic osteosarcoma is available in the provided sources.",
+    "contexts": [
+      "The current survival rate has increased to >65%.",
+      "Mason et al. made promising strides in a canine model of OS, using an attenuated listeria vaccine leading to a significant reduction in metastatic disease.",
+      "There have been no significant advances in the treatment of the disease over the last 10 plus years."
+    ],
+    "ground_truth": "Not answerable from provided sources. The osteosarcoma review reports >65% overall survival and preclinical immunotherapy data only. No metastatic-specific immunotherapy cure rates are documented.",
+    "metadata": {
+      "type": "fallback",
+      "reasoning_type": "retrieval",
+      "requires_graph": false,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": true
+    }
+  },
+  {
+    "question": "What dietary approach should be followed for secondary lactose intolerance during cancer treatment?",
+    "expected_answer": "Per NutritionGuideline on lactose intolerance: choose lactose-free or low-lactose milk products; use plant-based milk substitutes (soy, almond, oat, coconut, rice); choose naturally low-lactose options like hard cheeses (cheddar) and yogurt. Lactase enzyme supplements can help. Secondary lactose intolerance develops during abdominal/pelvic radiation and may persist for months after treatment or become permanent.",
+    "contexts": [
+      "NCI Eating Hints: Choose lactose-free or low-lactose milk products. Try milk substitutes, such as milk, yogurt, or ice cream made from soy, almond, oat, coconut, or rice. Choose milk products that are naturally low in lactose. Hard cheeses, such as cheddar, and yogurt are less likely to cause problems.",
+      "EatingAdverseEffect Lactose Intolerance (Secondary): onset='During or after abdominal/pelvic radiation'. management_tip='Lactase supplements; lactose-free dairy; plant milks'.",
+      "Graph: EatingAdverseEffect Lactose Intolerance WORSENED_BY FoodItem Dairy/Lactose-containing Foods {evidence:'High'}."
+    ],
+    "ground_truth": "Use lactose-free dairy, plant milks (soy, almond, oat), hard cheeses, and lactase supplements. Condition arises from abdominal/pelvic radiation and may persist long-term.",
+    "metadata": {
+      "type": "hybrid",
+      "reasoning_type": "multi-hop",
+      "requires_graph": true,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What is the interaction between morphine and vincristine and what are the eating consequences?",
+    "expected_answer": "The morphine–vincristine interaction (DI_MORPH_VINCR, Moderate severity) produces additive constipation and risk of paralytic ileus. Morphine activates opioid receptors reducing peristalsis; vincristine causes autonomic neuropathy and GI dysmotility. A mandatory prophylactic bowel regimen (macrogol + stimulant laxative) is required. Pain management without opioids is preferred in vincristine patients. Paralytic ileus may require bowel rest and IV nutrition.",
+    "contexts": [
+      "DrugInteraction DI_MORPH_VINCR: Morphine + Vincristine: Both cause constipation; additive risk of severe constipation, paralytic ileus. Severity: Moderate.",
+      "Mechanism: Opioid receptor activation + autonomic neuropathy from vincristine create severe GI dysmotility.",
+      "Clinical action: Prophylactic bowel regimen is mandatory; macrogol + stimulant laxative; consider methylnaltrexone.",
+      "Eating relevance: Paralytic ileus requires bowel rest and IV nutrition."
+    ],
+    "ground_truth": "Morphine + vincristine: additive constipation/paralytic ileus risk. Mandatory bowel regimen required (macrogol + stimulant laxative). May require IV nutrition if ileus develops.",
+    "metadata": {
+      "type": "graph",
+      "reasoning_type": "explanation",
+      "requires_graph": true,
+      "requires_vector": false,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "How is the EML4-ALK fusion gene formed and what are the typical patient characteristics in NSCLC?",
+    "expected_answer": "The EML4-ALK fusion results from a paracentric inversion of chromosome 2, with variant 1 (exon 13) being most common, found in 3–5% of NSCLC cases. Typical patients are young (median ~52 years), female, non-smokers or light smokers, with adenocarcinoma featuring cribriform and signet ring morphology. They tend to metastasize to pleura or pericardium and frequently develop CNS metastases.",
+    "contexts": [
+      "ALK gene has an incidence of 3-5% in patients with NSCLC and the most common partner is EML4.",
+      "The EML4-ALK fusion gene results from the paracentric inversion of chromosome 2 with at least 7 variants identified, variant 1 (v1) involving exon 13 being the most common.",
+      "Young age at diagnosis (a median of 52 years old), women gender, non-smokers/light smokers, histology of adenocarcinoma with cribriform and solid signet ring patterns, tendency to metastasize in pleura or pericardium, predominant CNS metastases."
+    ],
+    "ground_truth": "EML4-ALK arises from paracentric chromosome 2 inversion, found in 3–5% of NSCLC. Typical patients: young women, non-smokers, adenocarcinoma, frequent CNS and pleural metastases.",
+    "metadata": {
+      "type": "vector",
+      "reasoning_type": "explanation",
+      "requires_graph": false,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What are the high-risk cytogenetic features in Ph-negative ALL and how do they influence treatment?",
+    "expected_answer": "High-risk Ph-negative ALL cytogenetics include: t(4;11)/KMT2A, t(8;14), complex karyotype (≥5 abnormalities), low hypodiploidy (30–39 chromosomes), and near-triploidy (60–78 chromosomes). Ph-like ALL (BCR-ABL1 gene expression profile without t(9;22)) is also high-risk, associated with poor induction response, elevated MRD, and poor survival. MRD positivity after induction is an independent adverse prognostic factor. These features typically indicate the need for allogeneic stem cell transplantation in first complete remission.",
+    "contexts": [
+      "Subsequent analysis of MRC UKALL XII/ECOG E2993 identified cytogenetic subgroups with inferior outcomes: t(4;11), KMT2A translocation, t(8;14), complex karyotype (≥5 chromosomal abnormalities), low hypodiploidy (30–39 chromosomes)/near triploidy.",
+      "Ph-like ALL has been associated with poor response to induction chemotherapy, elevated minimal residual disease and poor survival.",
+      "MRD-positivity is an independent risk factor for decreased relapse-free and overall survival."
+    ],
+    "ground_truth": "High-risk cytogenetics in Ph-negative ALL include t(4;11), t(8;14), complex karyotype, low hypodiploidy, near-triploidy, and Ph-like profile. MRD positivity is independently adverse. These indicate need for allogeneic SCT in CR1.",
+    "metadata": {
+      "type": "vector",
+      "reasoning_type": "explanation",
+      "requires_graph": false,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "A melanoma patient on nivolumab takes levothyroxine for hypothyroidism. What monitoring and dietary considerations apply?",
+    "expected_answer": "Nivolumab can cause immune thyroiditis (DrugInteraction DI_LEVOTHYR_NIVOLUMAB, Moderate), altering levothyroxine requirements. Monitor TSH every 4–6 weeks; adjust levothyroxine accordingly; refer to endocrinology. Initial hyperthyroid phase: diarrhea and weight loss (increase caloric intake). Subsequent hypothyroid phase: constipation and weight gain (high-fiber diet, increased activity). Dietary adjustment tracks thyroid status.",
+    "contexts": [
+      "DrugInteraction DI_LEVOTHYR_NIVOLUMAB: Levothyroxine dose requirements may change due to immune thyroiditis. Severity: Moderate.",
+      "Clinical action: Monitor TSH every 4-6 weeks during immunotherapy; adjust levothyroxine dose; endocrinology referral.",
+      "Eating relevance: Hypothyroidism from irAE causes fatigue, constipation, weight gain; hyperthyroid causes diarrhoea, weight loss.",
+      "Graph: NonChemoDrug Levothyroxine HAS_INTERACTION_WITH ChemoDrug Nivolumab."
+    ],
+    "ground_truth": "Monitor TSH every 4–6 weeks; adjust levothyroxine dose with endocrinology input. Hyperthyroid phase causes diarrhea and weight loss; hypothyroid phase causes constipation and weight gain. Dietary approach adjusts accordingly.",
+    "metadata": {
+      "type": "hybrid",
+      "reasoning_type": "multi-hop",
+      "requires_graph": true,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What foods should I eat when I have a dry mouth from chemotherapy or head and neck radiation?",
+    "expected_answer": "For dry mouth (xerostomia), consume tart foods and drinks like lemonade (stimulate residual saliva), and sip water frequently throughout the day (high evidence for keeping the mouth moist). Chew sugar-free gum or suck ice chips and popsicles. Moisten foods with sauces and gravies. Avoid alcohol, which worsens xerostomia by desiccating oral mucosa. Artificial saliva products and lip balm provide additional relief.",
+    "contexts": [
+      "Graph: EatingAdverseEffect Dry Mouth (Xerostomia) RELIEVED_BY FoodItem Citrus Fruits/Acidic Foods {evidence:'Moderate', notes:'Tart foods stimulate residual salivary gland function; only if no mucositis'}",
+      "Graph: EatingAdverseEffect Dry Mouth (Xerostomia) RELIEVED_BY FoodItem Water/Clear Liquids {evidence:'High', notes:'Frequent small sips maintain oral moisture'}",
+      "Graph: EatingAdverseEffect Dry Mouth (Xerostomia) WORSENED_BY FoodItem Alcohol {evidence:'High', notes:'Further desiccates oral mucosa'}",
+      "NCI Eating Hints: Sip water throughout the day. Eat and drink very sweet or tart foods and drinks. Chew gum or suck on hard candy, frozen fruit, popsicles, and ice chips. Moisten food with sauce, gravy, or salad dressing."
+    ],
+    "ground_truth": "Drink water frequently, eat tart foods/lemonade (stimulate saliva), chew sugar-free gum, and use ice chips. Avoid alcohol. Moisten food with gravies and sauces.",
+    "metadata": {
+      "type": "graph",
+      "reasoning_type": "retrieval",
+      "requires_graph": true,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What is the treatment protocol for first-line advanced melanoma with combined ipilimumab and nivolumab?",
+    "expected_answer": "The Ipi+Nivo (Melanoma) protocol: Ipilimumab 3 mg/kg + Nivolumab 1 mg/kg every 3 weeks for 4 cycles, followed by Nivolumab 240 mg every 2 weeks. It is a first-line regimen for advanced melanoma. This combination increases immune-related adverse events including immune colitis, which requires a low-residue diet and corticosteroids per NG008.",
+    "contexts": [
+      "Graph: TreatmentProtocol Ipi+Nivo (Melanoma): Ipilimumab 3mg/kg + Nivolumab 1mg/kg q3w × 4 then Nivo 240mg q2w; first-line advanced melanoma.",
+      "NutritionGuideline NG008: For patients with immune colitis from checkpoint inhibitors: low-residue diet, avoid high-fibre foods, lactose, and fatty foods; corticosteroids for grade 2+.",
+      "ChemoDrug Nivolumab notes: combination with ipilimumab increases irAE incidence."
+    ],
+    "ground_truth": "Ipi+Nivo: ipilimumab 3 mg/kg + nivolumab 1 mg/kg q3w ×4, then nivolumab 240 mg q2w. Immune colitis (low-residue diet + corticosteroids) is a key dietary management concern.",
+    "metadata": {
+      "type": "hybrid",
+      "reasoning_type": "multi-hop",
+      "requires_graph": true,
+      "requires_vector": false,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What is lorlatinib's role in ALK-rearranged NSCLC and what resistance mutations does it overcome?",
+    "expected_answer": "Lorlatinib is a third-generation ALK TKI approved in the first-line setting for metastatic ALK-rearranged NSCLC with progressive disease on crizotinib and other ALK inhibitors. It targets mutations resistant to previous generations, including the G1202R solvent front mutation (most common post-second-generation TKI failure). It also demonstrates good CNS penetration. Compound mutations (e.g., ALK-G1202R/L1196M, ALK-I1171N/L1196F) may develop post-lorlatinib and further narrow therapeutic options.",
+    "contexts": [
+      "Lorlatinib is a third-generation TKI approved in 2018 by the FDA in the first-line setting for metastatic NSCLC patients with ALK rearrangement with progressive disease on crizotinib and other ALK inhibitors.",
+      "Due to its activity, it targets mutations which determine resistance to the other ALK TKI, including GR solvent-form mutation, and facilitates CNS penetration.",
+      "After analyzing the post-progression samples, the literature data suggest that half of the patients developed compound mutations such as ALK-GR/LM, ALK-EK/DN/GA, and ALK-IN/LF."
+    ],
+    "ground_truth": "Lorlatinib is a third-generation ALK TKI for progressive ALK+ NSCLC after prior TKIs. It overcomes G1202R and other resistance mutations and has CNS penetration. Post-lorlatinib compound mutations remain a challenge.",
+    "metadata": {
+      "type": "vector",
+      "reasoning_type": "explanation",
+      "requires_graph": false,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What is the recommended protein intake approach for cancer patients with weight loss and poor appetite?",
+    "expected_answer": "For cancer patients with weight loss and poor appetite, the NCI Eating Hints recommends: eating on a schedule (not waiting for hunger); eating 5–6 small high-calorie, high-protein meals daily; adding protein to meals with peanut butter, nuts, seeds, eggs, cheese, protein powder; drinking milkshakes, smoothies, and oral nutritional supplements (Ensure, Boost) when solid food is refused; and using the High-Protein Milkshake recipe (480–600 kcal, 22–28g protein). The graph identifies Protein Shakes/Oral Nutritional Supplements as relieving weight loss with high evidence.",
+    "contexts": [
+      "Graph: EatingAdverseEffect Weight Loss RELIEVED_BY FoodItem Protein Shakes/Oral Nutritional Supplements {evidence:'High', notes:'High calorie, high protein; helps meet nutritional goals when appetite is low'}",
+      "NCI Eating Hints: Eat foods that are high in protein and calories. 'Power pack' your diet by adding protein and calories to other foods. Add toppings like peanut butter, olive oil, nuts, seeds, avocado, honey, and jam to all foods.",
+      "NCI Eating Hints: Drink milkshakes, smoothies, juices, or soups if you do not feel like eating solid foods.",
+      "NCI Eating Hints High-Protein Milkshake: 1 cup whole milk, 1/2 cup ice cream, 1/3 cup instant dry milk or protein powder. Calories: 480-600, protein: 22-28g per serving."
+    ],
+    "ground_truth": "Eat 5–6 small high-protein, high-calorie meals daily. Add protein via peanut butter, nuts, eggs, and protein powder. Use oral nutritional supplements. High-Protein Milkshake recipe provides 480–600 kcal and 22–28g protein.",
+    "metadata": {
+      "type": "hybrid",
+      "reasoning_type": "multi-hop",
+      "requires_graph": true,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What is the difference between ALK-dependent and ALK-independent resistance mechanisms to TKIs in NSCLC?",
+    "expected_answer": "ALK-dependent (on-target) resistance involves continued ALK signaling: secondary mutations in the ALK kinase domain (e.g., L1196M, G1202R) and ALK gene copy number gain. ALK-independent (off-target) resistance involves the tumor bypassing ALK signaling via EGFR, KRAS, KIT, MET, IGF-1R pathway activation, drug efflux, EMT, or histological transformation to small cell cancer. Approximately half of all resistance mechanisms remain unknown.",
+    "contexts": [
+      "ALK-dependent 'on-target' tumors are driven by ALK signaling, while ALK 'off-target' means that the driver mutation and the tumor cells are based on a different mechanism such as by-pass signaling pathways activation, drug efflux mechanisms, or histological transition.",
+      "Secondary resistance can be divided into dominant (ALK intra-kinase domain mutation, increased copy number gain of ALK gene) and non-dominant such as bypass signaling pathways activation.",
+      "Studies have shown that multiple mechanisms of resistance can occur simultaneously by the identification of epithelial-to-mesenchymal transition in ALK kinase domain mutations.",
+      "From the available data, almost half of the mechanisms of resistance remain unknown."
+    ],
+    "ground_truth": "ALK-dependent (on-target): kinase domain mutations and gene copy number gain. ALK-independent (off-target): EGFR/KRAS/MET bypass signaling, drug efflux, EMT, small cell transformation. ~50% of mechanisms remain unknown.",
+    "metadata": {
+      "type": "vector",
+      "reasoning_type": "comparison",
+      "requires_graph": false,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What is the difference between basal cell carcinoma and squamous cell carcinoma in terms of aggressiveness and mortality?",
+    "expected_answer": "BCC arises from basal epidermal cells, is locally destructive but rarely metastasizes, and accounts for 80–90% of skin cancers but has low mortality (2 deaths per 14 million for locally advanced BCC). SCC arises from keratinocytes, is more aggressive, can metastasize, and causes approximately 75% of NMSC mortality despite being less prevalent than BCC. BCC is linked to intermittent UV exposure; SCC to cumulative UV exposure. SCC has a 13.3% rate of second SCC occurrence.",
+    "contexts": [
+      "BCC develops from the basal cells of the epidermis layer, has follicular structures, and is locally destructive but rarely metastasizes.",
+      "Although BCC is more prevalent, accounting for 80%–90% of skin cancers, it has a lower mortality rate than SCC. SCC accounts for 75% of the mortality rate owing to NMSCs.",
+      "Two patients per 14,000,000 die from locally advanced BCC. In contrast, SCC accounts for 75% of the mortality rate owing to NMSCs."
+    ],
+    "ground_truth": "BCC rarely metastasizes (~80–90% of skin cancers, very low mortality). SCC is more aggressive and causes ~75% of NMSC mortality. BCC linked to intermittent UV; SCC to cumulative UV exposure.",
+    "metadata": {
+      "type": "vector",
+      "reasoning_type": "comparison",
+      "requires_graph": false,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What is the newest immunotherapy option for melanoma that combines three checkpoint inhibitors?",
+    "expected_answer": "The provided source documents describe triple immune checkpoint therapy combining nivolumab + relatlimab + ipilimumab investigated in the RELATIVITY-048 trial in a small cohort of patients, with an objective response rate of 58.7% and 48-month overall survival rate of 71.7%. This represents the newest multi-checkpoint combination described in the sources. Standard dual combinations (nivolumab + ipilimumab) remain the established protocol (Ipi+Nivo). Clinical trials for this triple combination are ongoing.",
+    "contexts": [
+      "Triple immune checkpoint therapy with nivolumab + relatlimab + ipilimumab was also investigated in a small cohort of patients (RELATIVITY-048 trial), with an objective response rate of 58.7% and a 48-month overall survival rate of 71.7%.",
+      "Graph: TreatmentProtocol Ipi+Nivo (Melanoma) INCLUDES_DRUG Ipilimumab and Nivolumab."
+    ],
+    "ground_truth": "Triple combination nivolumab + relatlimab + ipilimumab (RELATIVITY-048 trial) showed 58.7% ORR and 71.7% 48-month OS rate in a small cohort. Standard established protocol remains nivolumab + ipilimumab.",
+    "metadata": {
+      "type": "vector",
+      "reasoning_type": "retrieval",
+      "requires_graph": false,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What are the nutritional management differences between managing mucositis vs diarrhea in chemo patients?",
+    "expected_answer": "Mucositis management: soft, moist foods; cold foods (popsicles, ice chips); avoid acidic, spicy, crunchy foods; saltwater rinses; soft protein (scrambled eggs). Diarrhea management: low-fiber, binding foods (white rice, bananas); avoid dairy/lactose, high-fiber, fatty/spicy foods; high fluid intake with electrolytes (8–12 cups/day). Common contradiction: tart/citrus foods may help dry mouth (stimulate saliva) but must be avoided in mucositis. Foods like scrambled eggs and bananas are safe for both conditions simultaneously.",
+    "contexts": [
+      "Graph: Sore Mouth RELIEVED_BY Cold Foods, Scrambled Eggs; WORSENED_BY Citrus Fruits, Spicy Foods, Alcohol",
+      "Graph: Diarrhoea RELIEVED_BY White Rice, Bananas, Yogurt/Probiotics; WORSENED_BY High-Fibre Foods, Dairy, Spicy Foods",
+      "NCI Eating Hints: Mucositis – choose soft foods, avoid acidic, salty foods, spicy foods. Diarrhea – eat low-fiber foods; avoid greasy, fatty foods; drink plenty of fluids."
+    ],
+    "ground_truth": "Mucositis: soft/cold foods, avoid acidic and spicy. Diarrhea: low-fiber, binding foods, high fluids, avoid dairy/fiber. Key overlap: scrambled eggs and bananas are safe for both. Citrus helps dry mouth but worsens mucositis.",
+    "metadata": {
+      "type": "hybrid",
+      "reasoning_type": "comparison",
+      "requires_graph": true,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What is the BRAF V600E mutation and which cancer treatments specifically target it?",
+    "expected_answer": "BRAF V600E is the most frequent somatic mutation in melanoma, activating the MAPK cell proliferation pathway. Targeted treatments include: Vemurafenib (BRAF inhibitor, 960 mg twice daily, for BRAF V600E+ melanoma), Dabrafenib (BRAF inhibitor), and Trametinib (MEK inhibitor, 2 mg once daily, used with dabrafenib as BRAF/MEK combination). The combination prevents feedback MAPK reactivation seen with BRAF inhibitor monotherapy and is standard for BRAF-mutant advanced melanoma. BRAF+ tumors may also receive immune checkpoint inhibitors.",
+    "contexts": [
+      "Graph: Cancer Skin Cancer HAS_BIOMARKER Biomarker BRAF V600E mutation {therapeutic_relevance:'Vemurafenib, Dabrafenib, Trametinib'}",
+      "ChemoDrug Vemurafenib notes: Selectively inhibits BRAF V600E mutant kinase, blocking MAPK pathway. Typical dose: 960 mg twice daily.",
+      "ChemoDrug Trametinib notes: Blocks MEK1/2 in the RAS/RAF/MEK/ERK pathway. Used with dabrafenib (BRAF/MEK combo) for BRAF+ melanoma.",
+      "Mutations in the BRAF gene are the most frequent somatic mutations in melanoma, activating specifically the MAPK pathway."
+    ],
+    "ground_truth": "BRAF V600E activates MAPK signaling and is the most common melanoma somatic mutation. Targeted by vemurafenib (960 mg BD), dabrafenib, and trametinib (2 mg daily) in combinations. Immune checkpoint inhibitors are also used for BRAF-mutant disease.",
+    "metadata": {
+      "type": "hybrid",
+      "reasoning_type": "multi-hop",
+      "requires_graph": true,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "Is there a specific diet that can cure or prevent cancer recurrence after treatment?",
+    "expected_answer": "No specific diet has been proven to cure cancer or prevent its recurrence. The NCI Eating Hints explicitly states there are no studies proving any special diet, food, vitamin, or supplement can slow cancer, cure it, or prevent recurrence. However, healthy eating after treatment helps regain strength, rebuild tissue, and improve wellbeing. Recommended post-treatment dietary principles include eating a variety of fruits, vegetables, whole grains, lean proteins, and minimizing fat, salt, sugar, alcohol, and processed meats.",
+    "contexts": [
+      "NCI Eating Hints: There are no studies that prove that any special diet, food, vitamin, mineral, dietary supplement, herb, or combination of these can slow cancer, cure it, or keep it from coming back.",
+      "While healthy eating by itself cannot keep cancer from coming back, it can help you regain strength, rebuild tissue, and improve how you feel after treatment ends.",
+      "NCI Eating Hints post-treatment: Eat lots of fruits and vegetables. Eat whole wheat bread, oats, brown rice. Go easy on fat, salt, sugar, alcohol, smoked or pickled foods, and processed meats."
+    ],
+    "ground_truth": "No diet prevents cancer recurrence. Healthy eating post-treatment supports recovery. Eat varied fruits, vegetables, whole grains, and lean proteins; minimize fat, salt, sugar, and alcohol.",
+    "metadata": {
+      "type": "fallback",
+      "reasoning_type": "retrieval",
+      "requires_graph": false,
+      "requires_vector": true,
+      "requires_image": false,
+      "should_trigger_fallback": false
+    }
+  },
+  {
+    "question": "What does Figure 9 of the melanoma review show regarding acral lentiginous melanoma histology?",
+    "expected_answer": "Figure 9 (melanoma-skin-cancer-review_picture_14.png, H&E 10×) shows acral lentiginous in situ melanoma with features of eccrine duct involvement. This demonstrates the characteristic lentiginous pattern of melanocyte proliferation at the basal epidermal layer in ALM, with involvement of eccrine (sweat) gland ducts, which is a distinctive histological feature of acral lentiginous melanoma in situ.",
+    "contexts": [
+      "Image caption [melanoma-skin-cancer-review_picture_14.png]: Figure 9. Acral lentiginous melanoma, histology (hematoxylin-eosin stain), 10×. Acral lentiginous in situ melanoma with features of eccrine duct involvement.",
+      "Histologically, melanocytes are usually hyperchromatic. Initially, melanocyte cells are arranged in a lentiginous pattern at the basal epidermal layer. With progression, lesions frequently show more frequent nests, intraepithelial pagetoid spreading, and spindle cell morphology."
+    ],
+    "ground_truth": "Figure 9 (H&E 10×) shows acral lentiginous in situ melanoma with eccrine duct involvement, demonstrating the characteristic lentiginous basal melanocyte proliferation of ALM.",
+    "metadata": {
+      "type": "image",
+      "reasoning_type": "retrieval",
+      "requires_graph": false,
+      "requires_vector": false,
+      "requires_image": true,
+      "should_trigger_fallback": false
+    }
+  }
+]

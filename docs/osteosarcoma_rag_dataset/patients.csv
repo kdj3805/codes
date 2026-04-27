@@ -1,0 +1,11 @@
+patient_id,name,age,gender,location
+P001,Aarav Sharma,15,Male,Mumbai
+P002,Zoya Khan,18,Female,Delhi
+P003,Vivaan Patil,11,Male,Pune
+P004,Meera Iyer,22,Female,Chennai
+P005,Rishabh Desai,17,Male,Ahmedabad
+P006,Anirban Ghosh,42,Male,Kolkata
+P007,Farhan Ali,19,Male,Hyderabad
+P008,Kavya Singh,14,Female,Jaipur
+P009,Aditya Rao,20,Male,Bengaluru
+P010,Neha Verma,25,Female,Lucknow

@@ -1,0 +1,20 @@
+
+P001: High-grade osteoblastic osteosarcoma of distal femur. Stage IIB. Necrosis 92%. Limb salvage performed. Favorable prognosis.
+
+P002: Metastatic osteosarcoma with bilateral pulmonary nodules. Stage IV. Necrosis 45%. Ifosfamide added. Febrile neutropenia observed.
+
+P003: Localized osteosarcoma of proximal humerus. Stage IIA. Necrosis 88%. Good response to chemotherapy.
+
+P004: Recurrent osteosarcoma detected after 18 months. Gemcitabine + Docetaxel initiated.
+
+P005: Poor chemotherapy response (necrosis 40%). Amputation recommended due to high recurrence risk.
+
+P006: Secondary osteosarcoma arising from Paget’s disease. Aggressive clinical course expected.
+
+P007: Pelvic osteosarcoma. Large tumor (11.5 cm). Difficult surgical margins. Guarded prognosis.
+
+P008: Excellent chemotherapy response (necrosis 95%). Surveillance protocol planned.
+
+P009: Developed cardiomyopathy after Doxorubicin. Cardiac monitoring started.
+
+P010: Lung and bone metastasis. Palliative chemotherapy initiated. Pain management ongoing.

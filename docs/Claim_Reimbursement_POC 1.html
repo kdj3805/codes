@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Capability 2.0 — Claim Reimbursement POC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:      #0B1E3D;
+      --navy-mid:  #112952;
+      --navy-soft: #1A3A6B;
+      --gold:      #C8973A;
+      --gold-lt:   #E8B45A;
+      --gold-pale: #FDF3E0;
+
+      --health-h:  #1A6B45;
+      --health-bg: #E8F7EF;
+      --health-acc:#27A065;
+      --health-tag:#C6EDD9;
+
+      --text:      #1C1C2E;
+      --text-mid:  #3D4560;
+      --text-soft: #6B7494;
+      --border:    #E2E8F0;
+      --white:     #FFFFFF;
+      --bg:        #F5F7FB;
+
+      --shadow-sm: 0 2px 8px rgba(11,30,61,.07);
+      --shadow-md: 0 6px 24px rgba(11,30,61,.11);
+      --shadow-lg: 0 16px 48px rgba(11,30,61,.14);
+
+      --radius:    14px;
+      --radius-sm: 8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #EEF4FF 0%, #E6EEFC 55%, #F0F5FF 100%);
+      border-bottom: 2px solid #D0DDF5;
+      position: relative;
+      overflow: hidden;
+      padding: 56px 64px 48px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 700px 400px at 85% 40%, rgba(200,151,58,.07) 0%, transparent 65%),
+        radial-gradient(ellipse 500px 350px at 5% 90%, rgba(45,107,196,.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: start;
+      gap: 32px;
+      position: relative;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(27,79,138,.1);
+      border: 1px solid rgba(27,79,138,.25);
+      color: var(--navy-soft);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow::before { content: '◆'; font-size: 8px; }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(34px, 3.6vw, 52px);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.1;
+      letter-spacing: -.02em;
+      margin-bottom: 16px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(90deg, var(--health-acc), #4A8FD4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      color: var(--text-mid);
+      font-size: 15px;
+      max-width: 640px;
+      line-height: 1.7;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-end;
+      flex-shrink: 0;
+    }
+
+    .meta-pill {
+      background: rgba(27,79,138,.07);
+      border: 1px solid rgba(27,79,138,.18);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 12px;
+      color: var(--text-mid);
+      white-space: nowrap;
+    }
+    .meta-pill strong { color: var(--health-acc); font-weight: 600; }
+
+    /* Layout */
+    .main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 64px 72px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .section-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+      background: var(--health-bg);
+    }
+
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      color: var(--health-acc);
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .section-divider {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .poc-count {
+      font-size: 12px;
+      color: var(--text-soft);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 4px 12px;
+      white-space: nowrap;
+    }
+
+    /* Card grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      transition: box-shadow .25s, transform .25s;
+      animation: fadeUp .5s ease both;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-bar {
+      height: 4px;
+      background: linear-gradient(90deg, var(--health-acc), #52D99A);
+    }
+
+    .card-head {
+      padding: 20px 24px 16px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .card-sno {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+      background: var(--health-tag);
+      color: var(--health-h);
+    }
+
+    .card-title-block { flex: 1; }
+
+    .card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .card-desc {
+      font-size: 13.5px;
+      color: var(--text-mid);
+      line-height: 1.75;
+    }
+    .card-desc p { margin-bottom: 8px; }
+    .card-desc p:last-child { margin-bottom: 0; }
+    .card-desc strong { color: var(--text); font-weight: 600; }
+    .card-desc ul {
+      margin: 6px 0 8px 4px;
+      padding-left: 16px;
+      list-style: none;
+    }
+    .card-desc ul li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+    .card-desc ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      font-size: 10px;
+      top: 3px;
+      color: var(--health-acc);
+    }
+
+    .card-diagram {
+      margin-top: 14px;
+      padding: 10px 0 0;
+    }
+    .card-diagram-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-soft);
+      margin-bottom: 8px;
+    }
+
+    .card-meta-bar {
+      padding: 10px 22px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-meta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .card-meta-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-soft);
+    }
+
+    .chip-user, .chip-product, .chip, .roi-badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 11.5px;
+      background: #F3F4FF;
+      color: var(--text-mid);
+    }
+    .chip-user { background: #E8F7EF; color: var(--health-h); }
+    .chip-product { background: #EEF2FF; color: var(--navy-soft); }
+
+    .card-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .card-body > * + * {
+      border-left: 1px solid var(--border);
+    }
+
+    .card-section {
+      padding: 18px 22px;
+    }
+
+    .card-section-full {
+      padding: 18px 22px;
+      border-top: 1px solid var(--border);
+      grid-column: 1 / -1;
+    }
+
+    .cs-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--health-acc);
+    }
+
+    .tech-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .chip-stack { background: #F3F4FF; color: var(--navy-soft); }
+    .chip-llm { background: #E8F7EF; color: var(--health-h); }
+
+    .pipeline {
+      list-style: none;
+      margin: 4px 0 0;
+      padding-left: 0;
+    }
+    .pipeline li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 4px;
+      font-size: 13px;
+      color: var(--text-mid);
+    }
+    .step-num {
+      width: 18px; height: 18px;
+      border-radius: 999px;
+      background: var(--health-acc);
+      color: white;
+      font-size: 11px;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 1px;
+      flex-shrink: 0;
+    }
+    .kw { font-weight: 600; color: var(--health-h); }
+
+    .roi-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .roi-item {
+      font-size: 13px;
+      color: var(--text-mid);
+    }
+    .roi-badge {
+      background: #FFF7ED;
+      color: #B45309;
+      font-weight: 600;
+      margin-right: 6px;
+    }
+
+    .saas-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 4px 0 0;
+    }
+    .saas-list li {
+      font-size: 13px;
+      color: var(--text-mid);
+      margin-bottom: 4px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero { padding: 40px 20px 32px; }
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .hero-meta { align-items: flex-start; }
+      .main { padding: 32px 20px 56px; }
+      .card-body {
+        grid-template-columns: 1fr;
+      }
+      .card-body > * + * {
+        border-left: none;
+        border-top: 1px solid var(--border);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-eyebrow">AI Capability 2.0 — Healthcare &amp; Insurance</div>
+        <h1 class="hero-title">Claim Reimbursement<br/><span>AI POC Blueprint</span></h1>
+        <p class="hero-sub">
+          End-to-end POC for automating health insurance claim reimbursement — from <strong>uploading invoices and medical bills</strong>
+          to <strong>extracting policy rules</strong> and computing the <strong>eligible reimbursement amount</strong> for each line item.
+        </p>
+      </div>
+      <div class="hero-meta">
+        <div class="meta-pill"><strong>Domain</strong> · Health Insurance / TPA</div>
+        <div class="meta-pill"><strong>POC Type</strong> · Claims Automation</div>
+        <div class="meta-pill"><strong>Primary Users</strong> · Claims Ops, Policyholders</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+    <section>
+      <div class="section-header">
+        <div class="section-icon">🏥</div>
+        <div>
+          <div class="section-label">POC 01</div>
+          <div class="section-title">AI-Assisted Health Claim Reimbursement</div>
+        </div>
+        <div class="section-divider"></div>
+        <div class="poc-count">Single POC · Executive View</div>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-bar"></div>
+          <div class="card-head">
+            <div class="card-sno">1</div>
+            <div class="card-title-block">
+              <div class="card-title">Automated Claim Eligibility &amp; Reimbursement Engine</div>
+              <div class="card-desc">
+                <p>
+                  Claims teams currently spend significant time <strong>manually checking medical invoices, hospital bills, scans/tests, and
+                  pharmacy bills</strong> against policy documents to decide what is reimbursable. This is slow, opaque for customers, and prone to errors.
+                </p>
+                <p>
+                  This POC creates an <strong>AI copilot for claim reimbursement</strong>. It ingests all claim artefacts —
+                  <strong>invoices, admission / discharge summaries, scan &amp; test reports, pharmacy / medicine bills</strong> — and combines them with
+                  the member’s <strong>policy document (e.g., HDFC policy PDF)</strong> to automatically:
+                </p>
+                <ul>
+                  <li>Extract structured data from <strong>unstructured PDFs / images</strong> using OCR + LLM extraction</li>
+                  <li>Retrieve and interpret <strong>relevant policy clauses</strong> for coverage, sub-limits, co-pay, waiting periods, and exclusions</li>
+                  <li>Apply <strong>time-window constraints</strong> (e.g., tests from 2 months prior to 1 month post admission, medicine bills within allowed period)</li>
+                  <li>Compute the <strong>eligible vs non-eligible amount</strong> by line item and summarise the final approved reimbursement</li>
+                </ul>
+                <p>
+                  Output is a <strong>transparent reimbursement summary</strong> for both claim operations and customers — clearly explaining
+                  <strong>“what is paid, what is not, and why”</strong>.
+                </p>
+              </div>
+              <div class="card-diagram">
+                <div class="card-diagram-label">High-Level Context Flow</div>
+                <svg viewBox="0 0 900 118" xmlns="http://www.w3.org/2000/svg" style="overflow:visible">
+                  <rect width="900" height="118" fill="#F1FBF5" rx="0"/>
+                  <!-- 1: Claim Documents Upload -->
+                  <rect x="28" y="35" width="148" height="60" rx="10" fill="rgba(0,0,0,0.06)"/>
+                  <rect x="26" y="33" width="148" height="60" rx="10" fill="#E8F7EF" stroke="#27A065" stroke-width="1.2"/>
+                  <circle cx="48" cy="63" r="11" fill="#27A065" opacity="0.15"/>
+                  <text x="48" y="67" text-anchor="middle" font-size="11">📄</text>
+                  <text x="64" y="57" font-family="DM Sans,sans-serif" font-size="10.5" font-weight="600" fill="#1A6B45" dominant-baseline="middle">Invoices &amp;</text>
+                  <text x="64" y="72" font-family="DM Sans,sans-serif" font-size="9.5" fill="#1A6B45" opacity="0.75" dominant-baseline="middle">Bills Upload</text>
+                  <line x1="177" y1="63" x2="189" y2="63" stroke="#27A065" stroke-width="1.5" opacity="0.7"/>
+                  <polygon points="189,59 197,63 189,67" fill="#27A065" opacity="0.7"/>
+
+                  <!-- 2: OCR + Structuring -->
+                  <rect x="202" y="35" width="148" height="60" rx="10" fill="rgba(0,0,0,0.06)"/>
+                  <rect x="200" y="33" width="148" height="60" rx="10" fill="#E8F7EF" stroke="#27A065" stroke-width="1.2"/>
+                  <circle cx="222" cy="63" r="11" fill="#27A065" opacity="0.15"/>
+                  <text x="222" y="67" text-anchor="middle" font-size="11">🔍</text>
+                  <text x="238" y="57" font-family="DM Sans,sans-serif" font-size="10.5" font-weight="600" fill="#1A6B45" dominant-baseline="middle">OCR +</text>
+                  <text x="238" y="72" font-family="DM Sans,sans-serif" font-size="9.5" fill="#1A6B45" opacity="0.75" dominant-baseline="middle">Field Extraction</text>
+                  <line x1="351" y1="63" x2="363" y2="63" stroke="#27A065" stroke-width="1.5" opacity="0.7"/>
+                  <polygon points="363,59 371,63 363,67" fill="#27A065" opacity="0.7"/>
+
+                  <!-- 3: Policy RAG -->
+                  <rect x="376" y="35" width="148" height="60" rx="10" fill="rgba(0,0,0,0.06)"/>
+                  <rect x="374" y="33" width="148" height="60" rx="10" fill="#E8F7EF" stroke="#27A065" stroke-width="1.2"/>
+                  <circle cx="396" cy="63" r="11" fill="#27A065" opacity="0.15"/>
+                  <text x="396" y="67" text-anchor="middle" font-size="11">📚</text>
+                  <text x="412" y="57" font-family="DM Sans,sans-serif" font-size="10.5" font-weight="600" fill="#1A6B45" dominant-baseline="middle">Policy Doc</text>
+                  <text x="412" y="72" font-family="DM Sans,sans-serif" font-size="9.5" fill="#1A6B45" opacity="0.75" dominant-baseline="middle">RAG Retrieval</text>
+                  <line x1="525" y1="63" x2="537" y2="63" stroke="#27A065" stroke-width="1.5" opacity="0.7"/>
+                  <polygon points="537,59 545,63 537,67" fill="#27A065" opacity="0.7"/>
+
+                  <!-- 4: Eligibility & Rule Engine -->
+                  <rect x="550" y="35" width="148" height="60" rx="10" fill="rgba(0,0,0,0.06)"/>
+                  <rect x="548" y="33" width="148" height="60" rx="10" fill="#E8F7EF" stroke="#27A065" stroke-width="1.2"/>
+                  <circle cx="570" cy="63" r="11" fill="#27A065" opacity="0.15"/>
+                  <text x="570" y="67" text-anchor="middle" font-size="11">⚖️</text>
+                  <text x="586" y="57" font-family="DM Sans,sans-serif" font-size="10.5" font-weight="600" fill="#1A6B45" dominant-baseline="middle">Eligibility &amp;</text>
+                  <text x="586" y="72" font-family="DM Sans,sans-serif" font-size="9.5" fill="#1A6B45" opacity="0.75" dominant-baseline="middle">Rule Engine</text>
+                  <line x1="699" y1="63" x2="711" y2="63" stroke="#27A065" stroke-width="1.5" opacity="0.7"/>
+                  <polygon points="711,59 719,63 711,67" fill="#27A065" opacity="0.7"/>
+
+                  <!-- 5: Reimbursement Summary -->
+                  <rect x="724" y="35" width="148" height="60" rx="10" fill="rgba(0,0,0,0.06)"/>
+                  <rect x="722" y="33" width="148" height="60" rx="10" fill="#E8F7EF" stroke="#27A065" stroke-width="1.2"/>
+                  <circle cx="744" cy="63" r="11" fill="#27A065" opacity="0.15"/>
+                  <text x="744" y="67" text-anchor="middle" font-size="11">📊</text>
+                  <text x="760" y="57" font-family="DM Sans,sans-serif" font-size="10.5" font-weight="600" fill="#1A6B45" dominant-baseline="middle">Reimbursement</text>
+                  <text x="760" y="72" font-family="DM Sans,sans-serif" font-size="9.5" fill="#1A6B45" opacity="0.75" dominant-baseline="middle">Summary Report</text>
+
+                  <!-- Step markers -->
+                  <circle cx="160" cy="40" r="8" fill="#27A065"/><text x="160" y="44" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" font-weight="700" fill="white">1</text>
+                  <circle cx="334" cy="40" r="8" fill="#27A065"/><text x="334" y="44" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" font-weight="700" fill="white">2</text>
+                  <circle cx="508" cy="40" r="8" fill="#27A065"/><text x="508" y="44" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" font-weight="700" fill="white">3</text>
+                  <circle cx="682" cy="40" r="8" fill="#27A065"/><text x="682" y="44" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" font-weight="700" fill="white">4</text>
+                  <circle cx="856" cy="40" r="8" fill="#27A065"/><text x="856" y="44" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" font-weight="700" fill="white">5</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-meta-bar">
+            <div class="card-meta-group">
+              <span class="card-meta-label">👤 User Type</span>
+              <span class="chip-user">Claims Ops Teams</span>
+              <span class="chip-user">TPA / Insurer</span>
+              <span class="chip-user">Policyholders</span>
+            </div>
+            <div class="card-meta-group">
+              <span class="card-meta-label">🖥️ Product Category</span>
+              <span class="chip-product">Web Platform</span>
+              <span class="chip-product">Ops Console</span>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="card-section">
+              <div class="cs-label">Tech Stack &amp; LLM</div>
+              <div class="tech-row">
+                <span class="chip chip-stack">Python</span>
+                <span class="chip chip-stack">FastAPI</span>
+                <span class="chip chip-stack">React</span>
+                <span class="chip chip-stack">PostgreSQL</span>
+                <span class="chip chip-stack">LangChain</span>
+                <span class="chip chip-stack">Tesseract / Azure Form Recognizer</span>
+                <span class="chip chip-stack">ChromaDB / pgvector</span>
+                <span class="chip chip-llm">GPT-4o</span>
+                <span class="chip chip-llm">Llama 3.2 70B</span>
+              </div>
+              <ul class="pipeline">
+                <li><span class="step-num">1</span><span>Member / hospital uploads <span class="kw">invoices, admit bills, scan &amp; test reports, medicine bills</span> plus policy PDF</span></li>
+                <li><span class="step-num">2</span><span><span class="kw">Vision OCR + table extraction</span> parses itemised charges, dates, departments, codes, quantities, and amounts</span></li>
+                <li><span class="step-num">3</span><span><span class="kw">RAG over policy documents</span> (e.g., HDFC) retrieves clauses for coverage, exclusions, sub-limits, and time windows</span></li>
+                <li><span class="step-num">4</span><span><span class="kw">Eligibility engine</span> evaluates each line item against rules (room rent caps, non-payables, co-pay, 2-month prior / 1-month post windows)</span></li>
+                <li><span class="step-num">5</span><span>LLM generates <span class="kw">structured reimbursement breakdown</span> (approved, partially approved, rejected) with reasons</span></li>
+              </ul>
+            </div>
+            <div class="card-section">
+              <div class="cs-label">ROI &amp; Business Value</div>
+              <div class="roi-grid">
+                <div class="roi-item"><span class="roi-badge">50–70% Faster</span> claim adjudication versus manual review only</div>
+                <div class="roi-item"><span class="roi-badge">30–40% Fewer</span> calculation and rule-application errors</div>
+                <div class="roi-item"><span class="roi-badge">Higher NPS</span> due to transparent decisions and clear explanations</div>
+                <div class="roi-item"><span class="roi-badge">Scalable</span> claim volume handling without linear headcount growth</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-section-full">
+            <div class="cs-label">SaaS Extension</div>
+            <ul class="saas-list">
+              <li><span class="kw">Hospital / TPA portal</span> with bulk upload of claim packets and instant eligibility preview</li>
+              <li><span class="kw">Self-service member view</span> showing line-item level decisions and “why this was not paid” reasons</li>
+              <li><span class="kw">Audit &amp; compliance mode</span> with exportable reasoning trace and policy clauses per decision</li>
+              <li><span class="kw">API-first integration</span> with existing core insurance and TPA systems for production rollout</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+

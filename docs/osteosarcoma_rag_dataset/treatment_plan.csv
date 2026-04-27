@@ -1,0 +1,11 @@
+patient_id,drugs,regimen_type,known_side_effects
+P001,Methotrexate; Doxorubicin; Cisplatin,MAP regimen,Mucositis; Cardiotoxicity; Nephrotoxicity
+P002,Doxorubicin; Cisplatin; Ifosfamide,MAP + Ifosfamide,Cardiotoxicity; Nephrotoxicity; Hemorrhagic cystitis
+P003,Methotrexate; Doxorubicin; Cisplatin,MAP regimen,Myelosuppression; Cardiotoxicity; Ototoxicity
+P004,Gemcitabine; Docetaxel,Second-line therapy,Myelosuppression; Peripheral neuropathy
+P005,Methotrexate; Doxorubicin; Cisplatin,MAP regimen,Hepatotoxicity; Cardiotoxicity
+P006,Cisplatin; Doxorubicin,Aggressive chemotherapy,Nephrotoxicity; Cardiotoxicity
+P007,Methotrexate; Doxorubicin; Cisplatin,MAP regimen,Mucositis; Nephrotoxicity
+P008,Methotrexate; Doxorubicin; Cisplatin,MAP regimen,Mild myelosuppression
+P009,Doxorubicin; Cisplatin,Modified MAP,Cardiomyopathy; Nephrotoxicity
+P010,Ifosfamide; Zoledronic acid,Palliative therapy,Neurotoxicity; Hypocalcemia

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Vertical Architecture Diagram">
+    <mxGraphModel dx="1200" dy="1600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="2" value="User" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="350" y="20" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="3" value="Frontend&#xa;Streamlit UI&#xa;Chat + Upload" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="300" y="120" width="300" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="4" value="Application Layer&#xa;Controller + Mode Selector + Streaming" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="260" y="260" width="380" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="5" value="Retrieval Layer&#xa;Graph RAG + Vector RAG" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="260" y="410" width="380" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="6" value="Storage Layer&#xa;Neo4j Vector DB + Files" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="260" y="560" width="380" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="7" value="LLM Layer&#xa;LLM Generation (Groq API)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="260" y="710" width="380" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="8" value="Ingestion Pipeline&#xa;PDF → Extraction → Cleaning → Chunking → Images" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="260" y="860" width="380" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="9" value="Response Output&#xa;Streaming + Images + Sources" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1020" width="300" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e1" edge="1" parent="1" source="2" target="3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="3" target="4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="4" target="5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="5" target="6"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="7" target="9"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="8" target="6"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

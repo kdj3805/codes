@@ -1,0 +1,361 @@
+patient_id,modality,report_file,imaging_date,dataset_split,ajcc_stage,cancer_type,bone_site,laterality,tumor_size_cm
+PT-96A42FE8,XRAY,PT-96A42FE8_xray_report.txt,14 June 2020,train,IA,Telangiectatic Osteosarcoma,Distal Femur,Right,4.5
+PT-96A42FE8,MRI,PT-96A42FE8_mri_report.txt,16 June 2020,train,IA,Telangiectatic Osteosarcoma,Distal Femur,Right,4.5
+PT-96A42FE8,CT,PT-96A42FE8_ct_report.txt,20 June 2020,train,IA,Telangiectatic Osteosarcoma,Distal Femur,Right,4.5
+PT-8FB6BB7C,XRAY,PT-8FB6BB7C_xray_report.txt,08 December 2024,train,IIB,Small Cell Osteosarcoma,Proximal Humerus,Right,13.5
+PT-8FB6BB7C,MRI,PT-8FB6BB7C_mri_report.txt,11 December 2024,train,IIB,Small Cell Osteosarcoma,Proximal Humerus,Right,13.5
+PT-8FB6BB7C,CT,PT-8FB6BB7C_ct_report.txt,14 December 2024,train,IIB,Small Cell Osteosarcoma,Proximal Humerus,Right,13.5
+PT-163BCC8B,XRAY,PT-163BCC8B_xray_report.txt,12 May 2024,train,IIB,Parosteal Osteosarcoma,Fibula,Right,8.7
+PT-163BCC8B,MRI,PT-163BCC8B_mri_report.txt,15 May 2024,train,IIB,Parosteal Osteosarcoma,Fibula,Right,8.7
+PT-163BCC8B,CT,PT-163BCC8B_ct_report.txt,15 May 2024,train,IIB,Parosteal Osteosarcoma,Fibula,Right,8.7
+PT-CA83D902,XRAY,PT-CA83D902_xray_report.txt,02 April 2019,train,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,10.7
+PT-CA83D902,MRI,PT-CA83D902_mri_report.txt,05 April 2019,train,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,10.7
+PT-CA83D902,CT,PT-CA83D902_ct_report.txt,07 April 2019,train,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,10.7
+PT-56499674,XRAY,PT-56499674_xray_report.txt,10 June 2019,train,IA,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,6.6
+PT-56499674,MRI,PT-56499674_mri_report.txt,14 June 2019,train,IA,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,6.6
+PT-56499674,CT,PT-56499674_ct_report.txt,16 June 2019,train,IA,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,6.6
+PT-AF20C899,XRAY,PT-AF20C899_xray_report.txt,27 May 2020,train,IA,Periosteal Osteosarcoma,Proximal Tibia,Left,3.4
+PT-AF20C899,MRI,PT-AF20C899_mri_report.txt,01 June 2020,train,IA,Periosteal Osteosarcoma,Proximal Tibia,Left,3.4
+PT-AF20C899,CT,PT-AF20C899_ct_report.txt,30 May 2020,train,IA,Periosteal Osteosarcoma,Proximal Tibia,Left,3.4
+PT-62B0BF81,XRAY,PT-62B0BF81_xray_report.txt,02 March 2018,train,IIB,Periosteal Osteosarcoma,Spine,Central,8.5
+PT-62B0BF81,MRI,PT-62B0BF81_mri_report.txt,03 March 2018,train,IIB,Periosteal Osteosarcoma,Spine,Central,8.5
+PT-62B0BF81,CT,PT-62B0BF81_ct_report.txt,05 March 2018,train,IIB,Periosteal Osteosarcoma,Spine,Central,8.5
+PT-31DE8B0A,XRAY,PT-31DE8B0A_xray_report.txt,22 May 2024,train,IVA,Conventional (Central) Osteosarcoma,Fibula,Left,14.8
+PT-31DE8B0A,MRI,PT-31DE8B0A_mri_report.txt,24 May 2024,train,IVA,Conventional (Central) Osteosarcoma,Fibula,Left,14.8
+PT-31DE8B0A,CT,PT-31DE8B0A_ct_report.txt,28 May 2024,train,IVA,Conventional (Central) Osteosarcoma,Fibula,Left,14.8
+PT-ADCC8260,XRAY,PT-ADCC8260_xray_report.txt,07 December 2023,test,IIB,Periosteal Osteosarcoma,Proximal Femur,Right,14.1
+PT-ADCC8260,MRI,PT-ADCC8260_mri_report.txt,08 December 2023,test,IIB,Periosteal Osteosarcoma,Proximal Femur,Right,14.1
+PT-ADCC8260,CT,PT-ADCC8260_ct_report.txt,14 December 2023,test,IIB,Periosteal Osteosarcoma,Proximal Femur,Right,14.1
+PT-54AFF814,XRAY,PT-54AFF814_xray_report.txt,03 September 2019,train,IIB,Conventional (Central) Osteosarcoma,Fibula,Left,9.1
+PT-54AFF814,MRI,PT-54AFF814_mri_report.txt,08 September 2019,train,IIB,Conventional (Central) Osteosarcoma,Fibula,Left,9.1
+PT-54AFF814,CT,PT-54AFF814_ct_report.txt,05 September 2019,train,IIB,Conventional (Central) Osteosarcoma,Fibula,Left,9.1
+PT-0E0A621A,XRAY,PT-0E0A621A_xray_report.txt,01 March 2023,train,IA,Conventional (Central) Osteosarcoma,Distal Femur,Right,4.8
+PT-0E0A621A,MRI,PT-0E0A621A_mri_report.txt,04 March 2023,train,IA,Conventional (Central) Osteosarcoma,Distal Femur,Right,4.8
+PT-0E0A621A,CT,PT-0E0A621A_ct_report.txt,05 March 2023,train,IA,Conventional (Central) Osteosarcoma,Distal Femur,Right,4.8
+PT-77F81274,XRAY,PT-77F81274_xray_report.txt,15 January 2024,test,IA,Conventional (Central) Osteosarcoma,Distal Femur,Left,4.6
+PT-77F81274,MRI,PT-77F81274_mri_report.txt,17 January 2024,test,IA,Conventional (Central) Osteosarcoma,Distal Femur,Left,4.6
+PT-77F81274,CT,PT-77F81274_ct_report.txt,19 January 2024,test,IA,Conventional (Central) Osteosarcoma,Distal Femur,Left,4.6
+PT-B5666484,XRAY,PT-B5666484_xray_report.txt,27 November 2019,train,IIA,Conventional (Central) Osteosarcoma,Fibula,Right,5.4
+PT-B5666484,MRI,PT-B5666484_mri_report.txt,28 November 2019,train,IIA,Conventional (Central) Osteosarcoma,Fibula,Right,5.4
+PT-B5666484,CT,PT-B5666484_ct_report.txt,01 December 2019,train,IIA,Conventional (Central) Osteosarcoma,Fibula,Right,5.4
+PT-944B7CC3,XRAY,PT-944B7CC3_xray_report.txt,13 May 2019,test,IIB,Parosteal Osteosarcoma,Proximal Tibia,Right,12.6
+PT-944B7CC3,MRI,PT-944B7CC3_mri_report.txt,17 May 2019,test,IIB,Parosteal Osteosarcoma,Proximal Tibia,Right,12.6
+PT-944B7CC3,CT,PT-944B7CC3_ct_report.txt,16 May 2019,test,IIB,Parosteal Osteosarcoma,Proximal Tibia,Right,12.6
+PT-B21B51C1,XRAY,PT-B21B51C1_xray_report.txt,26 May 2020,train,IB,Conventional (Central) Osteosarcoma,Distal Femur,Right,10.7
+PT-B21B51C1,MRI,PT-B21B51C1_mri_report.txt,27 May 2020,train,IB,Conventional (Central) Osteosarcoma,Distal Femur,Right,10.7
+PT-B21B51C1,CT,PT-B21B51C1_ct_report.txt,31 May 2020,train,IB,Conventional (Central) Osteosarcoma,Distal Femur,Right,10.7
+PT-7A0D01D1,XRAY,PT-7A0D01D1_xray_report.txt,02 June 2022,train,IVA,Periosteal Osteosarcoma,Proximal Tibia,Right,21.8
+PT-7A0D01D1,MRI,PT-7A0D01D1_mri_report.txt,07 June 2022,train,IVA,Periosteal Osteosarcoma,Proximal Tibia,Right,21.8
+PT-7A0D01D1,CT,PT-7A0D01D1_ct_report.txt,08 June 2022,train,IVA,Periosteal Osteosarcoma,Proximal Tibia,Right,21.8
+PT-D17CA97B,XRAY,PT-D17CA97B_xray_report.txt,19 February 2022,validation,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,10.2
+PT-D17CA97B,MRI,PT-D17CA97B_mri_report.txt,21 February 2022,validation,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,10.2
+PT-D17CA97B,CT,PT-D17CA97B_ct_report.txt,25 February 2022,validation,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,10.2
+PT-FE65424A,XRAY,PT-FE65424A_xray_report.txt,19 September 2019,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,16.9
+PT-FE65424A,MRI,PT-FE65424A_mri_report.txt,23 September 2019,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,16.9
+PT-FE65424A,CT,PT-FE65424A_ct_report.txt,22 September 2019,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,16.9
+PT-60A5FC74,XRAY,PT-60A5FC74_xray_report.txt,24 March 2024,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Left,4.2
+PT-60A5FC74,MRI,PT-60A5FC74_mri_report.txt,26 March 2024,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Left,4.2
+PT-60A5FC74,CT,PT-60A5FC74_ct_report.txt,31 March 2024,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Left,4.2
+PT-F81471B4,XRAY,PT-F81471B4_xray_report.txt,10 September 2024,train,IIA,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,5.9
+PT-F81471B4,MRI,PT-F81471B4_mri_report.txt,13 September 2024,train,IIA,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,5.9
+PT-F81471B4,CT,PT-F81471B4_ct_report.txt,12 September 2024,train,IIA,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,5.9
+PT-D8C9CC4C,XRAY,PT-D8C9CC4C_xray_report.txt,24 April 2024,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,8.5
+PT-D8C9CC4C,MRI,PT-D8C9CC4C_mri_report.txt,27 April 2024,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,8.5
+PT-D8C9CC4C,CT,PT-D8C9CC4C_ct_report.txt,26 April 2024,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,8.5
+PT-AE7EA86C,XRAY,PT-AE7EA86C_xray_report.txt,03 February 2023,validation,IIA,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,4.2
+PT-AE7EA86C,MRI,PT-AE7EA86C_mri_report.txt,04 February 2023,validation,IIA,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,4.2
+PT-AE7EA86C,CT,PT-AE7EA86C_ct_report.txt,10 February 2023,validation,IIA,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,4.2
+PT-0221BC09,XRAY,PT-0221BC09_xray_report.txt,26 July 2020,train,III,Telangiectatic Osteosarcoma,Distal Femur,Right,14.1
+PT-0221BC09,MRI,PT-0221BC09_mri_report.txt,31 July 2020,train,III,Telangiectatic Osteosarcoma,Distal Femur,Right,14.1
+PT-0221BC09,CT,PT-0221BC09_ct_report.txt,01 August 2020,train,III,Telangiectatic Osteosarcoma,Distal Femur,Right,14.1
+PT-A475A1D1,XRAY,PT-A475A1D1_xray_report.txt,21 January 2022,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,12.1
+PT-A475A1D1,MRI,PT-A475A1D1_mri_report.txt,26 January 2022,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,12.1
+PT-A475A1D1,CT,PT-A475A1D1_ct_report.txt,26 January 2022,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,12.1
+PT-688732E4,XRAY,PT-688732E4_xray_report.txt,14 July 2019,test,IB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,9.3
+PT-688732E4,MRI,PT-688732E4_mri_report.txt,15 July 2019,test,IB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,9.3
+PT-688732E4,CT,PT-688732E4_ct_report.txt,18 July 2019,test,IB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,9.3
+PT-D8DD4645,XRAY,PT-D8DD4645_xray_report.txt,16 September 2019,test,III,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,10.8
+PT-D8DD4645,MRI,PT-D8DD4645_mri_report.txt,20 September 2019,test,III,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,10.8
+PT-D8DD4645,CT,PT-D8DD4645_ct_report.txt,18 September 2019,test,III,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,10.8
+PT-8F24839C,XRAY,PT-8F24839C_xray_report.txt,23 December 2022,train,IA,Conventional (Central) Osteosarcoma,Proximal Humerus,Left,5.8
+PT-8F24839C,MRI,PT-8F24839C_mri_report.txt,25 December 2022,train,IA,Conventional (Central) Osteosarcoma,Proximal Humerus,Left,5.8
+PT-8F24839C,CT,PT-8F24839C_ct_report.txt,30 December 2022,train,IA,Conventional (Central) Osteosarcoma,Proximal Humerus,Left,5.8
+PT-DA81E579,XRAY,PT-DA81E579_xray_report.txt,10 May 2021,validation,IA,Conventional (Central) Osteosarcoma,Proximal Femur,Right,7.7
+PT-DA81E579,MRI,PT-DA81E579_mri_report.txt,14 May 2021,validation,IA,Conventional (Central) Osteosarcoma,Proximal Femur,Right,7.7
+PT-DA81E579,CT,PT-DA81E579_ct_report.txt,17 May 2021,validation,IA,Conventional (Central) Osteosarcoma,Proximal Femur,Right,7.7
+PT-9F56C79E,XRAY,PT-9F56C79E_xray_report.txt,11 June 2018,validation,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,16.4
+PT-9F56C79E,MRI,PT-9F56C79E_mri_report.txt,14 June 2018,validation,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,16.4
+PT-9F56C79E,CT,PT-9F56C79E_ct_report.txt,16 June 2018,validation,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,16.4
+PT-5C407029,XRAY,PT-5C407029_xray_report.txt,09 December 2020,train,IB,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,10.6
+PT-5C407029,MRI,PT-5C407029_mri_report.txt,14 December 2020,train,IB,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,10.6
+PT-5C407029,CT,PT-5C407029_ct_report.txt,14 December 2020,train,IB,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,10.6
+PT-2122FAFF,XRAY,PT-2122FAFF_xray_report.txt,28 June 2023,train,IB,Conventional (Central) Osteosarcoma,Distal Femur,Right,10.9
+PT-2122FAFF,MRI,PT-2122FAFF_mri_report.txt,03 July 2023,train,IB,Conventional (Central) Osteosarcoma,Distal Femur,Right,10.9
+PT-2122FAFF,CT,PT-2122FAFF_ct_report.txt,03 July 2023,train,IB,Conventional (Central) Osteosarcoma,Distal Femur,Right,10.9
+PT-8CF771F0,XRAY,PT-8CF771F0_xray_report.txt,12 August 2020,train,III,Conventional (Central) Osteosarcoma,Distal Femur,Right,8.1
+PT-8CF771F0,MRI,PT-8CF771F0_mri_report.txt,15 August 2020,train,III,Conventional (Central) Osteosarcoma,Distal Femur,Right,8.1
+PT-8CF771F0,CT,PT-8CF771F0_ct_report.txt,15 August 2020,train,III,Conventional (Central) Osteosarcoma,Distal Femur,Right,8.1
+PT-E229A625,XRAY,PT-E229A625_xray_report.txt,08 May 2018,train,IIB,Telangiectatic Osteosarcoma,Proximal Tibia,Right,11.0
+PT-E229A625,MRI,PT-E229A625_mri_report.txt,09 May 2018,train,IIB,Telangiectatic Osteosarcoma,Proximal Tibia,Right,11.0
+PT-E229A625,CT,PT-E229A625_ct_report.txt,13 May 2018,train,IIB,Telangiectatic Osteosarcoma,Proximal Tibia,Right,11.0
+PT-D61057C0,XRAY,PT-D61057C0_xray_report.txt,27 April 2023,train,IIA,Conventional (Central) Osteosarcoma,Pelvis,Right,4.3
+PT-D61057C0,MRI,PT-D61057C0_mri_report.txt,28 April 2023,train,IIA,Conventional (Central) Osteosarcoma,Pelvis,Right,4.3
+PT-D61057C0,CT,PT-D61057C0_ct_report.txt,29 April 2023,train,IIA,Conventional (Central) Osteosarcoma,Pelvis,Right,4.3
+PT-7BBC2853,XRAY,PT-7BBC2853_xray_report.txt,21 December 2024,train,IIB,Parosteal Osteosarcoma,Proximal Humerus,Right,16.1
+PT-7BBC2853,MRI,PT-7BBC2853_mri_report.txt,26 December 2024,train,IIB,Parosteal Osteosarcoma,Proximal Humerus,Right,16.1
+PT-7BBC2853,CT,PT-7BBC2853_ct_report.txt,28 December 2024,train,IIB,Parosteal Osteosarcoma,Proximal Humerus,Right,16.1
+PT-D579993D,XRAY,PT-D579993D_xray_report.txt,03 October 2022,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,14.7
+PT-D579993D,MRI,PT-D579993D_mri_report.txt,07 October 2022,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,14.7
+PT-D579993D,CT,PT-D579993D_ct_report.txt,09 October 2022,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,14.7
+PT-1240F2CE,XRAY,PT-1240F2CE_xray_report.txt,27 February 2023,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,15.4
+PT-1240F2CE,MRI,PT-1240F2CE_mri_report.txt,28 February 2023,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,15.4
+PT-1240F2CE,CT,PT-1240F2CE_ct_report.txt,03 March 2023,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,15.4
+PT-E92BF4F2,XRAY,PT-E92BF4F2_xray_report.txt,14 November 2020,validation,IIB,Small Cell Osteosarcoma,Distal Femur,Right,9.5
+PT-E92BF4F2,MRI,PT-E92BF4F2_mri_report.txt,16 November 2020,validation,IIB,Small Cell Osteosarcoma,Distal Femur,Right,9.5
+PT-E92BF4F2,CT,PT-E92BF4F2_ct_report.txt,17 November 2020,validation,IIB,Small Cell Osteosarcoma,Distal Femur,Right,9.5
+PT-070FC128,XRAY,PT-070FC128_xray_report.txt,05 January 2019,train,IIA,Conventional (Central) Osteosarcoma,Ilium,Left,6.2
+PT-070FC128,MRI,PT-070FC128_mri_report.txt,10 January 2019,train,IIA,Conventional (Central) Osteosarcoma,Ilium,Left,6.2
+PT-070FC128,CT,PT-070FC128_ct_report.txt,11 January 2019,train,IIA,Conventional (Central) Osteosarcoma,Ilium,Left,6.2
+PT-6D1FDB92,XRAY,PT-6D1FDB92_xray_report.txt,14 September 2024,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Left,5.0
+PT-6D1FDB92,MRI,PT-6D1FDB92_mri_report.txt,15 September 2024,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Left,5.0
+PT-6D1FDB92,CT,PT-6D1FDB92_ct_report.txt,21 September 2024,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Left,5.0
+PT-116F887F,XRAY,PT-116F887F_xray_report.txt,15 June 2023,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,9.8
+PT-116F887F,MRI,PT-116F887F_mri_report.txt,17 June 2023,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,9.8
+PT-116F887F,CT,PT-116F887F_ct_report.txt,18 June 2023,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,9.8
+PT-366E88EA,XRAY,PT-366E88EA_xray_report.txt,05 March 2020,validation,IVB,Conventional (Central) Osteosarcoma,Fibula,Right,22.2
+PT-366E88EA,MRI,PT-366E88EA_mri_report.txt,08 March 2020,validation,IVB,Conventional (Central) Osteosarcoma,Fibula,Right,22.2
+PT-366E88EA,CT,PT-366E88EA_ct_report.txt,12 March 2020,validation,IVB,Conventional (Central) Osteosarcoma,Fibula,Right,22.2
+PT-1FEEF1AB,XRAY,PT-1FEEF1AB_xray_report.txt,18 July 2019,validation,IVA,Telangiectatic Osteosarcoma,Proximal Humerus,Right,17.8
+PT-1FEEF1AB,MRI,PT-1FEEF1AB_mri_report.txt,19 July 2019,validation,IVA,Telangiectatic Osteosarcoma,Proximal Humerus,Right,17.8
+PT-1FEEF1AB,CT,PT-1FEEF1AB_ct_report.txt,22 July 2019,validation,IVA,Telangiectatic Osteosarcoma,Proximal Humerus,Right,17.8
+PT-1C15A29A,XRAY,PT-1C15A29A_xray_report.txt,17 December 2018,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Right,5.9
+PT-1C15A29A,MRI,PT-1C15A29A_mri_report.txt,22 December 2018,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Right,5.9
+PT-1C15A29A,CT,PT-1C15A29A_ct_report.txt,21 December 2018,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Right,5.9
+PT-DFEA4359,XRAY,PT-DFEA4359_xray_report.txt,01 June 2018,test,IB,Conventional (Central) Osteosarcoma,Fibula,Left,13.0
+PT-DFEA4359,MRI,PT-DFEA4359_mri_report.txt,04 June 2018,test,IB,Conventional (Central) Osteosarcoma,Fibula,Left,13.0
+PT-DFEA4359,CT,PT-DFEA4359_ct_report.txt,04 June 2018,test,IB,Conventional (Central) Osteosarcoma,Fibula,Left,13.0
+PT-8D3CA777,XRAY,PT-8D3CA777_xray_report.txt,10 January 2020,train,IIB,Conventional (Central) Osteosarcoma,Spine,Central,12.3
+PT-8D3CA777,MRI,PT-8D3CA777_mri_report.txt,15 January 2020,train,IIB,Conventional (Central) Osteosarcoma,Spine,Central,12.3
+PT-8D3CA777,CT,PT-8D3CA777_ct_report.txt,14 January 2020,train,IIB,Conventional (Central) Osteosarcoma,Spine,Central,12.3
+PT-9F6416AD,XRAY,PT-9F6416AD_xray_report.txt,14 October 2024,train,IIB,Parosteal Osteosarcoma,Proximal Tibia,Right,11.8
+PT-9F6416AD,MRI,PT-9F6416AD_mri_report.txt,16 October 2024,train,IIB,Parosteal Osteosarcoma,Proximal Tibia,Right,11.8
+PT-9F6416AD,CT,PT-9F6416AD_ct_report.txt,21 October 2024,train,IIB,Parosteal Osteosarcoma,Proximal Tibia,Right,11.8
+PT-A9290580,XRAY,PT-A9290580_xray_report.txt,08 October 2019,train,IA,Conventional (Central) Osteosarcoma,Proximal Humerus,Left,5.3
+PT-A9290580,MRI,PT-A9290580_mri_report.txt,10 October 2019,train,IA,Conventional (Central) Osteosarcoma,Proximal Humerus,Left,5.3
+PT-A9290580,CT,PT-A9290580_ct_report.txt,12 October 2019,train,IA,Conventional (Central) Osteosarcoma,Proximal Humerus,Left,5.3
+PT-69CF6699,XRAY,PT-69CF6699_xray_report.txt,04 August 2024,test,IIA,Conventional (Central) Osteosarcoma,Proximal Humerus,Right,7.4
+PT-69CF6699,MRI,PT-69CF6699_mri_report.txt,06 August 2024,test,IIA,Conventional (Central) Osteosarcoma,Proximal Humerus,Right,7.4
+PT-69CF6699,CT,PT-69CF6699_ct_report.txt,07 August 2024,test,IIA,Conventional (Central) Osteosarcoma,Proximal Humerus,Right,7.4
+PT-96E3C5C5,XRAY,PT-96E3C5C5_xray_report.txt,27 April 2018,train,IIA,Telangiectatic Osteosarcoma,Distal Femur,Right,7.6
+PT-96E3C5C5,MRI,PT-96E3C5C5_mri_report.txt,28 April 2018,train,IIA,Telangiectatic Osteosarcoma,Distal Femur,Right,7.6
+PT-96E3C5C5,CT,PT-96E3C5C5_ct_report.txt,29 April 2018,train,IIA,Telangiectatic Osteosarcoma,Distal Femur,Right,7.6
+PT-98468AE2,XRAY,PT-98468AE2_xray_report.txt,26 March 2023,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,13.6
+PT-98468AE2,MRI,PT-98468AE2_mri_report.txt,27 March 2023,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,13.6
+PT-98468AE2,CT,PT-98468AE2_ct_report.txt,30 March 2023,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,13.6
+PT-C4DF5DB2,XRAY,PT-C4DF5DB2_xray_report.txt,03 February 2018,validation,IVA,Conventional (Central) Osteosarcoma,Distal Femur,Right,18.1
+PT-C4DF5DB2,MRI,PT-C4DF5DB2_mri_report.txt,04 February 2018,validation,IVA,Conventional (Central) Osteosarcoma,Distal Femur,Right,18.1
+PT-C4DF5DB2,CT,PT-C4DF5DB2_ct_report.txt,08 February 2018,validation,IVA,Conventional (Central) Osteosarcoma,Distal Femur,Right,18.1
+PT-5E50BB18,XRAY,PT-5E50BB18_xray_report.txt,28 July 2021,train,IVA,Conventional (Central) Osteosarcoma,Fibula,Left,11.7
+PT-5E50BB18,MRI,PT-5E50BB18_mri_report.txt,30 July 2021,train,IVA,Conventional (Central) Osteosarcoma,Fibula,Left,11.7
+PT-5E50BB18,CT,PT-5E50BB18_ct_report.txt,02 August 2021,train,IVA,Conventional (Central) Osteosarcoma,Fibula,Left,11.7
+PT-83EFD588,XRAY,PT-83EFD588_xray_report.txt,15 April 2020,test,IA,Conventional (Central) Osteosarcoma,Distal Femur,Right,3.9
+PT-83EFD588,MRI,PT-83EFD588_mri_report.txt,19 April 2020,test,IA,Conventional (Central) Osteosarcoma,Distal Femur,Right,3.9
+PT-83EFD588,CT,PT-83EFD588_ct_report.txt,21 April 2020,test,IA,Conventional (Central) Osteosarcoma,Distal Femur,Right,3.9
+PT-D9ABE8C4,XRAY,PT-D9ABE8C4_xray_report.txt,25 January 2021,train,IIA,Conventional (Central) Osteosarcoma,Fibula,Left,4.7
+PT-D9ABE8C4,MRI,PT-D9ABE8C4_mri_report.txt,28 January 2021,train,IIA,Conventional (Central) Osteosarcoma,Fibula,Left,4.7
+PT-D9ABE8C4,CT,PT-D9ABE8C4_ct_report.txt,27 January 2021,train,IIA,Conventional (Central) Osteosarcoma,Fibula,Left,4.7
+PT-F13CC8F7,XRAY,PT-F13CC8F7_xray_report.txt,09 October 2019,train,IIB,Conventional (Central) Osteosarcoma,Pelvis,Right,9.4
+PT-F13CC8F7,MRI,PT-F13CC8F7_mri_report.txt,13 October 2019,train,IIB,Conventional (Central) Osteosarcoma,Pelvis,Right,9.4
+PT-F13CC8F7,CT,PT-F13CC8F7_ct_report.txt,16 October 2019,train,IIB,Conventional (Central) Osteosarcoma,Pelvis,Right,9.4
+PT-71DC2C98,XRAY,PT-71DC2C98_xray_report.txt,22 January 2021,validation,IVA,Conventional (Central) Osteosarcoma,Distal Femur,Left,11.6
+PT-71DC2C98,MRI,PT-71DC2C98_mri_report.txt,24 January 2021,validation,IVA,Conventional (Central) Osteosarcoma,Distal Femur,Left,11.6
+PT-71DC2C98,CT,PT-71DC2C98_ct_report.txt,24 January 2021,validation,IVA,Conventional (Central) Osteosarcoma,Distal Femur,Left,11.6
+PT-0E5BA48B,XRAY,PT-0E5BA48B_xray_report.txt,27 June 2021,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Left,5.0
+PT-0E5BA48B,MRI,PT-0E5BA48B_mri_report.txt,28 June 2021,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Left,5.0
+PT-0E5BA48B,CT,PT-0E5BA48B_ct_report.txt,04 July 2021,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Left,5.0
+PT-B6ACA3C5,XRAY,PT-B6ACA3C5_xray_report.txt,21 April 2020,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Right,5.6
+PT-B6ACA3C5,MRI,PT-B6ACA3C5_mri_report.txt,26 April 2020,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Right,5.6
+PT-B6ACA3C5,CT,PT-B6ACA3C5_ct_report.txt,26 April 2020,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Right,5.6
+PT-3522FECF,XRAY,PT-3522FECF_xray_report.txt,18 September 2022,train,IB,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,12.5
+PT-3522FECF,MRI,PT-3522FECF_mri_report.txt,21 September 2022,train,IB,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,12.5
+PT-3522FECF,CT,PT-3522FECF_ct_report.txt,23 September 2022,train,IB,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,12.5
+PT-F807996C,XRAY,PT-F807996C_xray_report.txt,12 September 2020,train,IIB,Conventional (Central) Osteosarcoma,Proximal Humerus,Left,17.4
+PT-F807996C,MRI,PT-F807996C_mri_report.txt,14 September 2020,train,IIB,Conventional (Central) Osteosarcoma,Proximal Humerus,Left,17.4
+PT-F807996C,CT,PT-F807996C_ct_report.txt,14 September 2020,train,IIB,Conventional (Central) Osteosarcoma,Proximal Humerus,Left,17.4
+PT-E0539B5D,XRAY,PT-E0539B5D_xray_report.txt,11 April 2022,train,IIB,Conventional (Central) Osteosarcoma,Fibula,Left,17.7
+PT-E0539B5D,MRI,PT-E0539B5D_mri_report.txt,16 April 2022,train,IIB,Conventional (Central) Osteosarcoma,Fibula,Left,17.7
+PT-E0539B5D,CT,PT-E0539B5D_ct_report.txt,15 April 2022,train,IIB,Conventional (Central) Osteosarcoma,Fibula,Left,17.7
+PT-A1DD8F72,XRAY,PT-A1DD8F72_xray_report.txt,25 September 2021,validation,III,Parosteal Osteosarcoma,Distal Femur,Left,13.4
+PT-A1DD8F72,MRI,PT-A1DD8F72_mri_report.txt,28 September 2021,validation,III,Parosteal Osteosarcoma,Distal Femur,Left,13.4
+PT-A1DD8F72,CT,PT-A1DD8F72_ct_report.txt,27 September 2021,validation,III,Parosteal Osteosarcoma,Distal Femur,Left,13.4
+PT-F0A42C1F,XRAY,PT-F0A42C1F_xray_report.txt,05 March 2024,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Right,5.8
+PT-F0A42C1F,MRI,PT-F0A42C1F_mri_report.txt,08 March 2024,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Right,5.8
+PT-F0A42C1F,CT,PT-F0A42C1F_ct_report.txt,09 March 2024,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Right,5.8
+PT-CDC054FB,XRAY,PT-CDC054FB_xray_report.txt,06 March 2018,train,IVA,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,21.0
+PT-CDC054FB,MRI,PT-CDC054FB_mri_report.txt,07 March 2018,train,IVA,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,21.0
+PT-CDC054FB,CT,PT-CDC054FB_ct_report.txt,12 March 2018,train,IVA,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,21.0
+PT-1B218611,XRAY,PT-1B218611_xray_report.txt,18 September 2021,train,IB,Conventional (Central) Osteosarcoma,Distal Femur,Left,11.5
+PT-1B218611,MRI,PT-1B218611_mri_report.txt,23 September 2021,train,IB,Conventional (Central) Osteosarcoma,Distal Femur,Left,11.5
+PT-1B218611,CT,PT-1B218611_ct_report.txt,20 September 2021,train,IB,Conventional (Central) Osteosarcoma,Distal Femur,Left,11.5
+PT-BA892775,XRAY,PT-BA892775_xray_report.txt,08 August 2018,train,III,High-Grade Surface Osteosarcoma,Ilium,Left,12.5
+PT-BA892775,MRI,PT-BA892775_mri_report.txt,09 August 2018,train,III,High-Grade Surface Osteosarcoma,Ilium,Left,12.5
+PT-BA892775,CT,PT-BA892775_ct_report.txt,13 August 2018,train,III,High-Grade Surface Osteosarcoma,Ilium,Left,12.5
+PT-F155CE0C,XRAY,PT-F155CE0C_xray_report.txt,01 November 2022,train,III,Conventional (Central) Osteosarcoma,Distal Femur,Right,6.5
+PT-F155CE0C,MRI,PT-F155CE0C_mri_report.txt,05 November 2022,train,III,Conventional (Central) Osteosarcoma,Distal Femur,Right,6.5
+PT-F155CE0C,CT,PT-F155CE0C_ct_report.txt,07 November 2022,train,III,Conventional (Central) Osteosarcoma,Distal Femur,Right,6.5
+PT-710F06DD,XRAY,PT-710F06DD_xray_report.txt,11 March 2020,train,IIA,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,6.1
+PT-710F06DD,MRI,PT-710F06DD_mri_report.txt,15 March 2020,train,IIA,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,6.1
+PT-710F06DD,CT,PT-710F06DD_ct_report.txt,13 March 2020,train,IIA,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,6.1
+PT-ACC90D0A,XRAY,PT-ACC90D0A_xray_report.txt,29 March 2020,test,III,Conventional (Central) Osteosarcoma,Fibula,Left,10.5
+PT-ACC90D0A,MRI,PT-ACC90D0A_mri_report.txt,03 April 2020,test,III,Conventional (Central) Osteosarcoma,Fibula,Left,10.5
+PT-ACC90D0A,CT,PT-ACC90D0A_ct_report.txt,04 April 2020,test,III,Conventional (Central) Osteosarcoma,Fibula,Left,10.5
+PT-8C6E0759,XRAY,PT-8C6E0759_xray_report.txt,25 April 2024,train,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,9.7
+PT-8C6E0759,MRI,PT-8C6E0759_mri_report.txt,29 April 2024,train,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,9.7
+PT-8C6E0759,CT,PT-8C6E0759_ct_report.txt,29 April 2024,train,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,9.7
+PT-8E20D505,XRAY,PT-8E20D505_xray_report.txt,03 July 2018,train,III,Conventional (Central) Osteosarcoma,Distal Femur,Right,11.8
+PT-8E20D505,MRI,PT-8E20D505_mri_report.txt,04 July 2018,train,III,Conventional (Central) Osteosarcoma,Distal Femur,Right,11.8
+PT-8E20D505,CT,PT-8E20D505_ct_report.txt,05 July 2018,train,III,Conventional (Central) Osteosarcoma,Distal Femur,Right,11.8
+PT-C54BA8BC,XRAY,PT-C54BA8BC_xray_report.txt,07 July 2021,train,IIA,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,7.3
+PT-C54BA8BC,MRI,PT-C54BA8BC_mri_report.txt,12 July 2021,train,IIA,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,7.3
+PT-C54BA8BC,CT,PT-C54BA8BC_ct_report.txt,12 July 2021,train,IIA,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,7.3
+PT-320E5E96,XRAY,PT-320E5E96_xray_report.txt,08 August 2018,train,IB,Conventional (Central) Osteosarcoma,Distal Femur,Left,10.2
+PT-320E5E96,MRI,PT-320E5E96_mri_report.txt,11 August 2018,train,IB,Conventional (Central) Osteosarcoma,Distal Femur,Left,10.2
+PT-320E5E96,CT,PT-320E5E96_ct_report.txt,10 August 2018,train,IB,Conventional (Central) Osteosarcoma,Distal Femur,Left,10.2
+PT-1E9EAB5F,XRAY,PT-1E9EAB5F_xray_report.txt,11 February 2022,train,IB,Conventional (Central) Osteosarcoma,Proximal Humerus,Right,13.4
+PT-1E9EAB5F,MRI,PT-1E9EAB5F_mri_report.txt,16 February 2022,train,IB,Conventional (Central) Osteosarcoma,Proximal Humerus,Right,13.4
+PT-1E9EAB5F,CT,PT-1E9EAB5F_ct_report.txt,13 February 2022,train,IB,Conventional (Central) Osteosarcoma,Proximal Humerus,Right,13.4
+PT-C4238B4B,XRAY,PT-C4238B4B_xray_report.txt,18 August 2021,test,IIA,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,4.4
+PT-C4238B4B,MRI,PT-C4238B4B_mri_report.txt,21 August 2021,test,IIA,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,4.4
+PT-C4238B4B,CT,PT-C4238B4B_ct_report.txt,22 August 2021,test,IIA,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,4.4
+PT-B96B52D1,XRAY,PT-B96B52D1_xray_report.txt,23 June 2023,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,16.8
+PT-B96B52D1,MRI,PT-B96B52D1_mri_report.txt,26 June 2023,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,16.8
+PT-B96B52D1,CT,PT-B96B52D1_ct_report.txt,29 June 2023,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,16.8
+PT-4EC49DA5,XRAY,PT-4EC49DA5_xray_report.txt,14 October 2019,train,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,9.3
+PT-4EC49DA5,MRI,PT-4EC49DA5_mri_report.txt,17 October 2019,train,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,9.3
+PT-4EC49DA5,CT,PT-4EC49DA5_ct_report.txt,16 October 2019,train,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,9.3
+PT-D72471F1,XRAY,PT-D72471F1_xray_report.txt,30 June 2019,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Right,7.4
+PT-D72471F1,MRI,PT-D72471F1_mri_report.txt,02 July 2019,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Right,7.4
+PT-D72471F1,CT,PT-D72471F1_ct_report.txt,02 July 2019,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Right,7.4
+PT-4C69C0A9,XRAY,PT-4C69C0A9_xray_report.txt,24 May 2022,train,IIA,Periosteal Osteosarcoma,Distal Femur,Right,6.0
+PT-4C69C0A9,MRI,PT-4C69C0A9_mri_report.txt,27 May 2022,train,IIA,Periosteal Osteosarcoma,Distal Femur,Right,6.0
+PT-4C69C0A9,CT,PT-4C69C0A9_ct_report.txt,31 May 2022,train,IIA,Periosteal Osteosarcoma,Distal Femur,Right,6.0
+PT-31A5797E,XRAY,PT-31A5797E_xray_report.txt,07 January 2024,train,III,Conventional (Central) Osteosarcoma,Distal Femur,Left,11.4
+PT-31A5797E,MRI,PT-31A5797E_mri_report.txt,12 January 2024,train,III,Conventional (Central) Osteosarcoma,Distal Femur,Left,11.4
+PT-31A5797E,CT,PT-31A5797E_ct_report.txt,13 January 2024,train,III,Conventional (Central) Osteosarcoma,Distal Femur,Left,11.4
+PT-4F212469,XRAY,PT-4F212469_xray_report.txt,05 January 2021,train,III,Parosteal Osteosarcoma,Distal Femur,Right,7.5
+PT-4F212469,MRI,PT-4F212469_mri_report.txt,06 January 2021,train,III,Parosteal Osteosarcoma,Distal Femur,Right,7.5
+PT-4F212469,CT,PT-4F212469_ct_report.txt,07 January 2021,train,III,Parosteal Osteosarcoma,Distal Femur,Right,7.5
+PT-DE7B0BF8,XRAY,PT-DE7B0BF8_xray_report.txt,03 July 2020,test,IB,Conventional (Central) Osteosarcoma,Distal Femur,Right,12.7
+PT-DE7B0BF8,MRI,PT-DE7B0BF8_mri_report.txt,08 July 2020,test,IB,Conventional (Central) Osteosarcoma,Distal Femur,Right,12.7
+PT-DE7B0BF8,CT,PT-DE7B0BF8_ct_report.txt,05 July 2020,test,IB,Conventional (Central) Osteosarcoma,Distal Femur,Right,12.7
+PT-B8063F99,XRAY,PT-B8063F99_xray_report.txt,20 April 2020,test,IIB,Parosteal Osteosarcoma,Distal Femur,Left,15.4
+PT-B8063F99,MRI,PT-B8063F99_mri_report.txt,25 April 2020,test,IIB,Parosteal Osteosarcoma,Distal Femur,Left,15.4
+PT-B8063F99,CT,PT-B8063F99_ct_report.txt,23 April 2020,test,IIB,Parosteal Osteosarcoma,Distal Femur,Left,15.4
+PT-7DF31D60,XRAY,PT-7DF31D60_xray_report.txt,22 July 2024,train,IA,Conventional (Central) Osteosarcoma,Proximal Humerus,Right,3.2
+PT-7DF31D60,MRI,PT-7DF31D60_mri_report.txt,23 July 2024,train,IA,Conventional (Central) Osteosarcoma,Proximal Humerus,Right,3.2
+PT-7DF31D60,CT,PT-7DF31D60_ct_report.txt,25 July 2024,train,IA,Conventional (Central) Osteosarcoma,Proximal Humerus,Right,3.2
+PT-AD4AD54E,XRAY,PT-AD4AD54E_xray_report.txt,23 January 2019,train,IVA,Small Cell Osteosarcoma,Proximal Tibia,Right,16.7
+PT-AD4AD54E,MRI,PT-AD4AD54E_mri_report.txt,27 January 2019,train,IVA,Small Cell Osteosarcoma,Proximal Tibia,Right,16.7
+PT-AD4AD54E,CT,PT-AD4AD54E_ct_report.txt,25 January 2019,train,IVA,Small Cell Osteosarcoma,Proximal Tibia,Right,16.7
+PT-8E0DD8D7,XRAY,PT-8E0DD8D7_xray_report.txt,02 December 2024,train,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,9.5
+PT-8E0DD8D7,MRI,PT-8E0DD8D7_mri_report.txt,04 December 2024,train,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,9.5
+PT-8E0DD8D7,CT,PT-8E0DD8D7_ct_report.txt,09 December 2024,train,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,9.5
+PT-03B1F840,XRAY,PT-03B1F840_xray_report.txt,12 October 2020,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,10.3
+PT-03B1F840,MRI,PT-03B1F840_mri_report.txt,14 October 2020,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,10.3
+PT-03B1F840,CT,PT-03B1F840_ct_report.txt,16 October 2020,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,10.3
+PT-E248DF11,XRAY,PT-E248DF11_xray_report.txt,27 October 2021,train,IIA,Conventional (Central) Osteosarcoma,Proximal Humerus,Right,6.1
+PT-E248DF11,MRI,PT-E248DF11_mri_report.txt,29 October 2021,train,IIA,Conventional (Central) Osteosarcoma,Proximal Humerus,Right,6.1
+PT-E248DF11,CT,PT-E248DF11_ct_report.txt,31 October 2021,train,IIA,Conventional (Central) Osteosarcoma,Proximal Humerus,Right,6.1
+PT-1DC61A1E,XRAY,PT-1DC61A1E_xray_report.txt,04 June 2024,train,IB,Conventional (Central) Osteosarcoma,Fibula,Left,13.1
+PT-1DC61A1E,MRI,PT-1DC61A1E_mri_report.txt,08 June 2024,train,IB,Conventional (Central) Osteosarcoma,Fibula,Left,13.1
+PT-1DC61A1E,CT,PT-1DC61A1E_ct_report.txt,10 June 2024,train,IB,Conventional (Central) Osteosarcoma,Fibula,Left,13.1
+PT-C6F02F17,XRAY,PT-C6F02F17_xray_report.txt,01 April 2022,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,9.7
+PT-C6F02F17,MRI,PT-C6F02F17_mri_report.txt,04 April 2022,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,9.7
+PT-C6F02F17,CT,PT-C6F02F17_ct_report.txt,07 April 2022,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,9.7
+PT-31D84076,XRAY,PT-31D84076_xray_report.txt,22 January 2024,train,IIA,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,6.5
+PT-31D84076,MRI,PT-31D84076_mri_report.txt,25 January 2024,train,IIA,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,6.5
+PT-31D84076,CT,PT-31D84076_ct_report.txt,29 January 2024,train,IIA,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,6.5
+PT-F8E8A623,XRAY,PT-F8E8A623_xray_report.txt,14 December 2020,train,IVA,Conventional (Central) Osteosarcoma,Distal Femur,Left,14.4
+PT-F8E8A623,MRI,PT-F8E8A623_mri_report.txt,18 December 2020,train,IVA,Conventional (Central) Osteosarcoma,Distal Femur,Left,14.4
+PT-F8E8A623,CT,PT-F8E8A623_ct_report.txt,19 December 2020,train,IVA,Conventional (Central) Osteosarcoma,Distal Femur,Left,14.4
+PT-E95EF7FB,XRAY,PT-E95EF7FB_xray_report.txt,29 August 2019,train,IVB,Conventional (Central) Osteosarcoma,Spine,Central,17.7
+PT-E95EF7FB,MRI,PT-E95EF7FB_mri_report.txt,03 September 2019,train,IVB,Conventional (Central) Osteosarcoma,Spine,Central,17.7
+PT-E95EF7FB,CT,PT-E95EF7FB_ct_report.txt,02 September 2019,train,IVB,Conventional (Central) Osteosarcoma,Spine,Central,17.7
+PT-85AB76CD,XRAY,PT-85AB76CD_xray_report.txt,05 January 2021,train,IIA,Telangiectatic Osteosarcoma,Proximal Tibia,Left,4.2
+PT-85AB76CD,MRI,PT-85AB76CD_mri_report.txt,08 January 2021,train,IIA,Telangiectatic Osteosarcoma,Proximal Tibia,Left,4.2
+PT-85AB76CD,CT,PT-85AB76CD_ct_report.txt,07 January 2021,train,IIA,Telangiectatic Osteosarcoma,Proximal Tibia,Left,4.2
+PT-503E8BB5,XRAY,PT-503E8BB5_xray_report.txt,18 May 2024,validation,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,15.8
+PT-503E8BB5,MRI,PT-503E8BB5_mri_report.txt,19 May 2024,validation,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,15.8
+PT-503E8BB5,CT,PT-503E8BB5_ct_report.txt,21 May 2024,validation,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,15.8
+PT-8921E9F2,XRAY,PT-8921E9F2_xray_report.txt,24 March 2018,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,10.7
+PT-8921E9F2,MRI,PT-8921E9F2_mri_report.txt,25 March 2018,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,10.7
+PT-8921E9F2,CT,PT-8921E9F2_ct_report.txt,29 March 2018,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,10.7
+PT-B5B83D08,XRAY,PT-B5B83D08_xray_report.txt,08 May 2021,validation,IVA,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,13.1
+PT-B5B83D08,MRI,PT-B5B83D08_mri_report.txt,10 May 2021,validation,IVA,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,13.1
+PT-B5B83D08,CT,PT-B5B83D08_ct_report.txt,11 May 2021,validation,IVA,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,13.1
+PT-3F8D8A46,XRAY,PT-3F8D8A46_xray_report.txt,29 June 2020,validation,IVA,Telangiectatic Osteosarcoma,Proximal Tibia,Right,20.8
+PT-3F8D8A46,MRI,PT-3F8D8A46_mri_report.txt,02 July 2020,validation,IVA,Telangiectatic Osteosarcoma,Proximal Tibia,Right,20.8
+PT-3F8D8A46,CT,PT-3F8D8A46_ct_report.txt,02 July 2020,validation,IVA,Telangiectatic Osteosarcoma,Proximal Tibia,Right,20.8
+PT-4DF179FD,XRAY,PT-4DF179FD_xray_report.txt,25 January 2021,train,IB,Conventional (Central) Osteosarcoma,Distal Femur,Right,12.4
+PT-4DF179FD,MRI,PT-4DF179FD_mri_report.txt,27 January 2021,train,IB,Conventional (Central) Osteosarcoma,Distal Femur,Right,12.4
+PT-4DF179FD,CT,PT-4DF179FD_ct_report.txt,28 January 2021,train,IB,Conventional (Central) Osteosarcoma,Distal Femur,Right,12.4
+PT-55B0442A,XRAY,PT-55B0442A_xray_report.txt,02 November 2023,train,III,Conventional (Central) Osteosarcoma,Distal Femur,Right,9.5
+PT-55B0442A,MRI,PT-55B0442A_mri_report.txt,07 November 2023,train,III,Conventional (Central) Osteosarcoma,Distal Femur,Right,9.5
+PT-55B0442A,CT,PT-55B0442A_ct_report.txt,08 November 2023,train,III,Conventional (Central) Osteosarcoma,Distal Femur,Right,9.5
+PT-E9F32607,XRAY,PT-E9F32607_xray_report.txt,20 September 2022,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Right,6.4
+PT-E9F32607,MRI,PT-E9F32607_mri_report.txt,21 September 2022,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Right,6.4
+PT-E9F32607,CT,PT-E9F32607_ct_report.txt,27 September 2022,train,IIA,Conventional (Central) Osteosarcoma,Distal Femur,Right,6.4
+PT-BCAA70EB,XRAY,PT-BCAA70EB_xray_report.txt,03 September 2019,train,IVA,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,20.0
+PT-BCAA70EB,MRI,PT-BCAA70EB_mri_report.txt,04 September 2019,train,IVA,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,20.0
+PT-BCAA70EB,CT,PT-BCAA70EB_ct_report.txt,09 September 2019,train,IVA,Conventional (Central) Osteosarcoma,Proximal Tibia,Left,20.0
+PT-C68C6D26,XRAY,PT-C68C6D26_xray_report.txt,15 November 2019,test,IIB,Periosteal Osteosarcoma,Distal Femur,Left,12.8
+PT-C68C6D26,MRI,PT-C68C6D26_mri_report.txt,16 November 2019,test,IIB,Periosteal Osteosarcoma,Distal Femur,Left,12.8
+PT-C68C6D26,CT,PT-C68C6D26_ct_report.txt,18 November 2019,test,IIB,Periosteal Osteosarcoma,Distal Femur,Left,12.8
+PT-470B508A,XRAY,PT-470B508A_xray_report.txt,01 September 2019,train,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,14.6
+PT-470B508A,MRI,PT-470B508A_mri_report.txt,06 September 2019,train,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,14.6
+PT-470B508A,CT,PT-470B508A_ct_report.txt,07 September 2019,train,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,14.6
+PT-C30706CC,XRAY,PT-C30706CC_xray_report.txt,10 December 2024,train,IA,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,2.5
+PT-C30706CC,MRI,PT-C30706CC_mri_report.txt,13 December 2024,train,IA,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,2.5
+PT-C30706CC,CT,PT-C30706CC_ct_report.txt,16 December 2024,train,IA,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,2.5
+PT-29BBBB4A,XRAY,PT-29BBBB4A_xray_report.txt,10 May 2019,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,10.5
+PT-29BBBB4A,MRI,PT-29BBBB4A_mri_report.txt,14 May 2019,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,10.5
+PT-29BBBB4A,CT,PT-29BBBB4A_ct_report.txt,13 May 2019,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,10.5
+PT-ACDE9A9B,XRAY,PT-ACDE9A9B_xray_report.txt,05 November 2021,train,IVA,Small Cell Osteosarcoma,Distal Femur,Right,19.1
+PT-ACDE9A9B,MRI,PT-ACDE9A9B_mri_report.txt,08 November 2021,train,IVA,Small Cell Osteosarcoma,Distal Femur,Right,19.1
+PT-ACDE9A9B,CT,PT-ACDE9A9B_ct_report.txt,10 November 2021,train,IVA,Small Cell Osteosarcoma,Distal Femur,Right,19.1
+PT-7C892AC4,XRAY,PT-7C892AC4_xray_report.txt,29 December 2020,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,8.5
+PT-7C892AC4,MRI,PT-7C892AC4_mri_report.txt,31 December 2020,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,8.5
+PT-7C892AC4,CT,PT-7C892AC4_ct_report.txt,02 January 2021,train,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Right,8.5
+PT-83CBD876,XRAY,PT-83CBD876_xray_report.txt,15 February 2022,train,IVA,Periosteal Osteosarcoma,Distal Femur,Right,15.3
+PT-83CBD876,MRI,PT-83CBD876_mri_report.txt,20 February 2022,train,IVA,Periosteal Osteosarcoma,Distal Femur,Right,15.3
+PT-83CBD876,CT,PT-83CBD876_ct_report.txt,21 February 2022,train,IVA,Periosteal Osteosarcoma,Distal Femur,Right,15.3
+PT-6C596341,XRAY,PT-6C596341_xray_report.txt,11 July 2022,train,III,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,7.4
+PT-6C596341,MRI,PT-6C596341_mri_report.txt,12 July 2022,train,III,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,7.4
+PT-6C596341,CT,PT-6C596341_ct_report.txt,15 July 2022,train,III,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,7.4
+PT-DC8F0842,XRAY,PT-DC8F0842_xray_report.txt,17 November 2019,train,IIA,Telangiectatic Osteosarcoma,Fibula,Left,5.6
+PT-DC8F0842,MRI,PT-DC8F0842_mri_report.txt,22 November 2019,train,IIA,Telangiectatic Osteosarcoma,Fibula,Left,5.6
+PT-DC8F0842,CT,PT-DC8F0842_ct_report.txt,23 November 2019,train,IIA,Telangiectatic Osteosarcoma,Fibula,Left,5.6
+PT-A3263BCB,XRAY,PT-A3263BCB_xray_report.txt,30 April 2019,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,11.2
+PT-A3263BCB,MRI,PT-A3263BCB_mri_report.txt,05 May 2019,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,11.2
+PT-A3263BCB,CT,PT-A3263BCB_ct_report.txt,02 May 2019,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,11.2
+PT-09A15DC6,XRAY,PT-09A15DC6_xray_report.txt,15 December 2018,train,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,11.9
+PT-09A15DC6,MRI,PT-09A15DC6_mri_report.txt,18 December 2018,train,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,11.9
+PT-09A15DC6,CT,PT-09A15DC6_ct_report.txt,18 December 2018,train,IIB,Conventional (Central) Osteosarcoma,Proximal Tibia,Right,11.9
+PT-833AC555,XRAY,PT-833AC555_xray_report.txt,20 July 2024,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,14.2
+PT-833AC555,MRI,PT-833AC555_mri_report.txt,22 July 2024,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,14.2
+PT-833AC555,CT,PT-833AC555_ct_report.txt,26 July 2024,validation,IIB,Conventional (Central) Osteosarcoma,Distal Femur,Left,14.2
+PT-5E833710,XRAY,PT-5E833710_xray_report.txt,13 August 2024,train,IIB,Periosteal Osteosarcoma,Proximal Tibia,Right,16.1
+PT-5E833710,MRI,PT-5E833710_mri_report.txt,15 August 2024,train,IIB,Periosteal Osteosarcoma,Proximal Tibia,Right,16.1
+PT-5E833710,CT,PT-5E833710_ct_report.txt,15 August 2024,train,IIB,Periosteal Osteosarcoma,Proximal Tibia,Right,16.1
+PT-6EC70927,XRAY,PT-6EC70927_xray_report.txt,26 April 2020,test,IA,Conventional (Central) Osteosarcoma,Distal Femur,Right,4.2
+PT-6EC70927,MRI,PT-6EC70927_mri_report.txt,01 May 2020,test,IA,Conventional (Central) Osteosarcoma,Distal Femur,Right,4.2
+PT-6EC70927,CT,PT-6EC70927_ct_report.txt,30 April 2020,test,IA,Conventional (Central) Osteosarcoma,Distal Femur,Right,4.2
+PT-F0ED9724,XRAY,PT-F0ED9724_xray_report.txt,24 February 2021,train,IB,Conventional (Central) Osteosarcoma,Distal Femur,Right,9.2
+PT-F0ED9724,MRI,PT-F0ED9724_mri_report.txt,26 February 2021,train,IB,Conventional (Central) Osteosarcoma,Distal Femur,Right,9.2
+PT-F0ED9724,CT,PT-F0ED9724_ct_report.txt,27 February 2021,train,IB,Conventional (Central) Osteosarcoma,Distal Femur,Right,9.2
+PT-20402981,XRAY,PT-20402981_xray_report.txt,18 December 2018,train,IVA,Conventional (Central) Osteosarcoma,Proximal Humerus,Right,18.7
+PT-20402981,MRI,PT-20402981_mri_report.txt,20 December 2018,train,IVA,Conventional (Central) Osteosarcoma,Proximal Humerus,Right,18.7
+PT-20402981,CT,PT-20402981_ct_report.txt,23 December 2018,train,IVA,Conventional (Central) Osteosarcoma,Proximal Humerus,Right,18.7
+PT-F6B3EC8C,XRAY,PT-F6B3EC8C_xray_report.txt,03 November 2022,train,IVA,Conventional (Central) Osteosarcoma,Distal Femur,Right,16.5
+PT-F6B3EC8C,MRI,PT-F6B3EC8C_mri_report.txt,08 November 2022,train,IVA,Conventional (Central) Osteosarcoma,Distal Femur,Right,16.5
+PT-F6B3EC8C,CT,PT-F6B3EC8C_ct_report.txt,08 November 2022,train,IVA,Conventional (Central) Osteosarcoma,Distal Femur,Right,16.5

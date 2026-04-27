@@ -1,0 +1,11 @@
+report_id,patient_id,diagnosis,primary_site,stage,metastasis_status,tumor_size_cm,necrosis_percent
+R001,P001,High-grade osteoblastic osteosarcoma,Distal femur,IIB,No distant metastasis,7.8,92
+R002,P002,High-grade conventional osteosarcoma,Proximal tibia,IV,Pulmonary metastasis,10.2,45
+R003,P003,High-grade osteosarcoma,Proximal humerus,IIA,No distant metastasis,5.5,88
+R004,P004,Recurrent osteosarcoma,Distal femur,IIB,Local recurrence,8.0,75
+R005,P005,High-grade osteosarcoma,Distal femur,IIB,No distant metastasis,9.1,40
+R006,P006,Secondary osteosarcoma (Paget’s disease),Femur,III,No distant metastasis,8.7,60
+R007,P007,Pelvic osteosarcoma,Pelvis,III,Suspicious lung lesions,11.5,55
+R008,P008,High-grade osteosarcoma,Proximal tibia,IIB,No distant metastasis,6.9,95
+R009,P009,High-grade osteosarcoma,Distal femur,IIB,No distant metastasis,8.3,80
+R010,P010,Metastatic osteosarcoma,Femur,IV,Lung and bone metastasis,9.8,50
